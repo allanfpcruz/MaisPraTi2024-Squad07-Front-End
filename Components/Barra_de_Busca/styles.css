@@ -1,0 +1,128 @@
+/* Estilo Geral */
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+/* Outros Estilos */
+h1, h2, h3, label, input, button {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Barra de Busca */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Grupo de Busca */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap; /* Impede quebra de linha */
+}
+
+.input-group input {
+    flex: 2; /* Campo de texto maior */
+    min-width: 0; /* Permite que encolha */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.input-group select {
+    flex: 1; /* Tamanho proporcional */
+    max-width: 100px; /* Limita tamanho */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.input-group button {
+    flex: 0; /* Tamanho fixo */
+    padding: 10px 15px;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-group button i {
+    font-size: 16px;
+}
+
+.input-group button:hover {
+    background-color: #e69500;
+}
+
+/* Campos de Data */
+.field input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botão de Pesquisa */
+.search-button {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+    position: relative; /* Adicionado para habilitar o z-index */
+    z-index: 1; /* Sobrepõe outros elementos */
+}
+
+.search-button:hover {
+    background-color: #e69500;
+}
+
+.search-button i {
+    font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .field {
+        width: 100%;
+    }
+
+    .search-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
