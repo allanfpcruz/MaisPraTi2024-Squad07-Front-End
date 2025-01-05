@@ -1,0 +1,124 @@
+{
+  "cars": [
+    {
+      "plate": "AAA0000",
+      "brand": "Fiat",
+      "model": "Uno",
+      "year": 2001
+    },
+    {
+      "plate": "AAA0001",
+      "brand": "Hyundai",
+      "model": "HB20",
+      "year": 2012
+    },
+    {
+      "plate": "AAA0002",
+      "brand": "Chevrolet",
+      "model": "Onix",
+      "year": 2015
+    },
+    {
+      "plate": "BBB1234",
+      "brand": "Volkswagen",
+      "model": "Gol",
+      "year": 2010
+    },
+    {
+      "plate": "CCC5678",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2018
+    },
+    {
+      "plate": "DDD9876",
+      "brand": "Ford",
+      "model": "Focus",
+      "year": 2016
+    },
+    {
+      "plate": "EEE6543",
+      "brand": "Renault",
+      "model": "Sandero",
+      "year": 2019
+    },
+    {
+      "plate": "FFF4321",
+      "brand": "Honda",
+      "model": "Civic",
+      "year": 2020
+    },
+    {
+      "plate": "GGG3456",
+      "brand": "Nissan",
+      "model": "Versa",
+      "year": 2021
+    },
+    {
+      "plate": "HHH7890",
+      "brand": "Jeep",
+      "model": "Renegade",
+      "year": 2022
+    },
+    {
+      "plate": "AAA1B23",
+      "brand": "Fiat",
+      "model": "Strada",
+      "year": 2022
+    },
+    {
+      "plate": "BBB2C34",
+      "brand": "Chevrolet",
+      "model": "S10",
+      "year": 2021
+    },
+    {
+      "plate": "CCC3D45",
+      "brand": "Volkswagen",
+      "model": "Amarok",
+      "year": 2020
+    },
+    {
+      "plate": "DDD4E56",
+      "brand": "Toyota",
+      "model": "Hilux",
+      "year": 2023
+    },
+    {
+      "plate": "EEE5F67",
+      "brand": "Renault",
+      "model": "Duster",
+      "year": 2019
+    },
+    {
+      "plate": "FFF6G78",
+      "brand": "Honda",
+      "model": "HR-V",
+      "year": 2020
+    },
+    {
+      "plate": "GGG7H89",
+      "brand": "Hyundai",
+      "model": "Creta",
+      "year": 2021
+    },
+    {
+      "plate": "HHH8J90",
+      "brand": "Jeep",
+      "model": "Compass",
+      "year": 2022
+    },
+    {
+      "plate": "III9K01",
+      "brand": "Nissan",
+      "model": "Kicks",
+      "year": 2023
+    },
+    {
+      "plate": "JJJ0L12",
+      "brand": "Ford",
+      "model": "Maverick",
+      "year": 2023
+    }
+  ]
+}
