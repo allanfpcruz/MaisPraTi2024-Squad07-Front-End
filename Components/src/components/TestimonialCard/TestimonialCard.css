@@ -1,0 +1,129 @@
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinha todos os itens no centro */
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 200px;
+  min-height: 100px;
+  color: #1c1c1c;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.testimonial-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-left: 60px;
+  margin-bottom: 0;
+}
+
+.testimonial-rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  margin-left: 60px;
+}
+
+.star-filled {
+  color: #ffd700; /* Cor dourada para estrelas preenchidas */
+}
+
+.star-empty {
+  color: #e0e0e0; /* Cor mais clara para estrelas vazias */
+}
+
+.testimonial-comment {
+  max-width: 300px;
+  font-style: italic;
+  color: #555;
+  height: 60px; /* Altura máxima para o comentário */
+  overflow: hidden; /* Garante que o texto não ultrapasse o espaço */
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 20px;
+    max-width: 100%; /* Garante que o card ocupe toda a largura da tela */
+  }
+
+  .testimonial-photo {
+    width: 70px; /* Ajusta o tamanho da foto em telas menores */
+    height: 70px;
+  }
+
+  .testimonial-name {
+    font-size: 1rem;
+  }
+
+  .testimonial-rating {
+    margin-bottom: 8px;
+  }
+
+  .testimonial-comment {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 280px; /* Define um tamanho máximo consistente */
+    width: 100%;
+    min-height: 280px; /* Garante alturas uniformes */
+    box-sizing: border-box;
+    margin: 0 auto 20px; /* Centraliza o card e adiciona espaçamento inferior */
+  }
+
+  .testimonial-photo {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+
+  .testimonial-name {
+    position: relative;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0 5px; /* Espaçamento mais controlado */
+    top: 40px;
+  }
+
+  .testimonial-rating {
+    display: flex;
+    justify-content: center;
+    gap: 3px; /* Espaçamento entre as estrelas */
+    margin: 0 0 15px; /* Espaçamento inferior */
+  }
+
+  .star-filled,
+  .star-empty {
+    font-size: 1rem; /* Ajusta o tamanho das estrelas */
+  }
+
+  .testimonial-comment {
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+    line-height: 1.4;
+    margin-top: auto; /* Garante que o texto ocupe o espaço restante */
+  }
+}

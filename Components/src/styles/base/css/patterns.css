@@ -1,0 +1,143 @@
+/*
+Link FIGMA:
+https://www.figma.com/design/4u9bHWXwfCMDqh1eTTrBP7/Project-aluCar?node-id=0-1&p=f&t=xZaMLFbbOXp1deXm-0
+*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@font-face {
+    font-family: 'Outfit';
+    src: url(/Fonts/Outfit/Outfit-VariableFont_wght.ttf) format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Designer';
+    src: url(/Fonts/designer_2/Designer.otf) format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 
+1REM de medida equivale equivale a quantidade de pixels de acordo com o tamanho
+da tela no momento, por exemplo: para --rem-devices-220 um elemento da página com
+2REM d altura terá 20px, se a tela aumentar os elementos acompanharão
+progressivamente de modo que essa unidade de medida facilita a responsividade.
+*/
+:root{
+  --rem-devices-ultra-small:8px;
+  --rem-devices-220: 10px;
+  --rem-devices-265: 14px;
+  --rem-devices-300: 18px;
+  --rem-devices-370: 22px;
+  --rem-devices-405: 22px;
+  --rem-devices-425: 25px;
+  --rem-devices-500: 25px;
+  --rem-devices-600: 25px;
+  --rem-devices-700: 29px;
+  --rem-devices-900: 36px;
+  --rem-devices-1100: 42px;
+  --rem-devices-1300: 48px;
+  --rem-devices-1500: 54px;
+  --rem-devices-1700: 60px;
+  --rem-devices-1900: 66px;
+  --rem-devices-2100: 72px;
+  --rem-devices-2300: 78px;
+  --rem-devices-2500: 84px;
+  --rem-devices-2700: 90px;
+  --rem-devices-2900: 96px;
+  --rem-devices-3100: 102px;
+  --rem-devices-6200: 204px;
+  --primary-font-family: 'Outfit' , sans-serif;
+  --secondary-font-family: 'Designer';
+  --container-width: 100vw;
+  --regra-disposicao-grid-items: min(100vw/2, max(167px,100vw/6));
+  --regra-disposicao-flex-items: min(100vw/3, max(5rem,100vw/3));
+  --primary-color:#21201e;
+  --secondary-color:#ffa733;
+  --tertiary-color:#137385;
+  --quaternary-color:#ffffff;
+}
+
+html{ font-family: var(--primary-font-family); }
+
+body{
+    background-color: var(/*
+    Inserir variável da cor adequada ao fundo
+    por exemplo: --primary-color
+    */);
+    width: 100vw;
+    height: 100vh;
+}
+
+.flexbox_container{
+    box-sizing: border-box;
+    display: flex;
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+.flexbox_simple_container{
+    box-sizing: border-box;
+    display: flex;
+    margin: 0 auto;
+}
+
+.centralize_flexbox_vertical_items{
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.centralize_flexbox_horizontal_items{
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.justify_flexbox_horizontal_items{
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.justify_flexbox_vertical_items{
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.grid_container{
+    box-sizing: border-box;
+    display: grid;
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+.block_container{
+    box-sizing: border-box;
+    display: block;
+    width: var(--primary-container-width);
+    margin: 0 auto;
+}
+.relative_container{ position: relative; }
+
+@media (min-width: 0px) and (max-width: 219px) { html{ font-size: var(--rem-devices-ultra-small);}}
+@media (min-width: 220px) and (max-width: 264px) { html{ font-size: var(--rem-devices-220);}}
+@media (min-width: 265px) and (max-width: 299px) { html{ font-size: var(--rem-devices-265);}}
+@media (min-width: 300px) and (max-width: 369px) { html{ font-size: var(--rem-devices-300);}}
+@media (min-width: 370px) and (max-width: 405px) { html{ font-size: var(--rem-devices-370);}}
+@media (min-width: 406px) and (max-width: 425px) { html{ font-size: var(--rem-devices-425);}}
+@media (min-width: 426px) and (max-width: 500px) { html{ font-size: var(--rem-devices-500);}}
+@media (min-width: 501px) and (max-width: 600px) { html{ font-size: var(--rem-devices-600);}}
+@media (min-width: 601px) and (max-width: 700px) { html{ font-size: var(--rem-devices-700);}}
+@media (min-width: 701px) and (max-width: 900px) { html{ font-size: var(--rem-devices-900);}}
+@media (min-width: 901px) and (max-width: 1100px) { html{ font-size: var(--rem-devices-1100);}}
+@media (min-width: 1101px) and (max-width: 1300px) { html{ font-size: var(--rem-devices-1300);}}
+@media (min-width: 1301px) and (max-width: 1500px) { html{ font-size: var(--rem-devices-1500);}}
+@media (min-width: 1501px) and (max-width: 1700px) { html{ font-size: var(--rem-devices-1700);}}
+@media (min-width: 1701px) and (max-width: 1900px) { html{ font-size: var(--rem-devices-1900);}}
+@media (min-width: 1901px) and (max-width: 2100px) { html{ font-size: var(--rem-devices-2100);}}
+@media (min-width: 2101px) and (max-width: 2300px) { html{ font-size: var(--rem-devices-2300);}}
+@media (min-width: 2301px) and (max-width: 2500px) { html{ font-size: var(--rem-devices-2500);}}
+@media (min-width: 2501px) and (max-width: 2700px) { html{ font-size: var(--rem-devices-2700);}}
+@media (min-width: 2701px) and (max-width: 2900px) { html{ font-size: var(--rem-devices-2900);}}
+@media (min-width: 2901px) and (max-width: 3100px) { html{ font-size: var(--rem-devices-3100);}}
+@media (min-width: 3101px) and (max-width: 6200px) { html{ font-size: var(--rem-devices-6200);}}
