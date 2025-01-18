@@ -28,8 +28,11 @@ function App() {
     <>
 	<nav className="bg-white navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
       	<div className="container-fluid">
+			
+			// Logo
         	<img className='navbar-brand p-0' src={alucarLogo} alt="AluCar Logo" style={{ height: '80px' }}/>
 
+			// Menu de Navegação
         	<div className="collapse navbar-collapse" id="navbarNav">
 				<div className='d-flex flex-grow-1 justify-content-center' id='menuLinks'>
 					<ul className="w-50 navbar-nav d-flex justify-content-around">
@@ -42,6 +45,7 @@ function App() {
 						<li className='nav-item d-flex flex-column'>
         	  	  			<a className="nav-link" href="#notificacoes" onClick={toggleDropdownNotif} id='link'><img className='me-2 mb-1' src={bellIcon} style={{ height: '18px' }}/>Notificação</a>
 							
+							// Dropdown de Notificações
 							{isDropdownNotifOpen && (
 								<div className={`w-25 bg-white position-absolute mt-5 p-2 bg-light border border-secondary rounded-1`} id='responsiveDropdown'>
 									<ul className="list-unstyled ">
@@ -58,10 +62,12 @@ function App() {
 					
 				</div>
         	  	
+				// Botões de Usuário e Criar Anúncio
         	  	<div className="d-flex ms-auto" id='btnLinks'>
         	  	  	<button className="btn btn-light border border-secondary me-2 rounded-1 d-flex align-items-center justify-content-center" onClick={toggleDropdown} id='btn1'><img src=""/>Usuário<img className='ms-2' src={CaretDown} style={{ height: '23px' }}/></button>
         	  	  	<button className="btn rounded-1 d-flex align-items-center justify-content-center" id='btn2'><img className='me-2' src={addIcon} style={{ height: '12px' }}/>Criar Anúncio</button>
 
+					// Dropdown de Usuário
 					{isDropdownUserOpen && (
 						<div className={`bg-white position-absolute mt-5 p-2 bg-light border border-secondary rounded-1`}>
 							<ul className="list-unstyled mb-0">
