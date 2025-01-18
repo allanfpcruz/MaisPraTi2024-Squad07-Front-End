@@ -28,19 +28,7 @@ function App() {
     <>
 	<nav className="bg-white navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
       	<div className="container-fluid">
-        	<a className="navbar-brand p-0"><img src={alucarLogo} alt="AluCar Logo" style={{ height: '80px' }}/></a>
-        
-			<button
-        	  className="navbar-toggler"
-        	  type="button"
-        	  data-bs-toggle="collapse"
-        	  data-bs-target="#navbarNav"
-        	  aria-controls="navbarNav"
-        	  aria-expanded="false"
-        	  aria-label="Toggle navigation"
-        	>
-        	<span className="navbar-toggler-icon"></span>
-			</button>
+        	<img className='navbar-brand p-0' src={alucarLogo} alt="AluCar Logo" style={{ height: '80px' }}/>
 
         	<div className="collapse navbar-collapse" id="navbarNav">
 				<div className='d-flex flex-grow-1 justify-content-center' id='menuLinks'>
