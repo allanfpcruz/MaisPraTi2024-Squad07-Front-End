@@ -1,0 +1,127 @@
+:root{
+    --login-background-color: #f5f7f6;
+}
+
+body {
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    width: 30rem;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#left-login-container {
+    display: inherit;
+    flex-flow: column;
+    background-color: var(--login-background-color);
+    max-width: 15rem;
+    height: 100vh;
+}
+
+#right-login-container {
+    display: inherit;
+    flex-flow: column;
+    max-width: 15rem;
+    height: 100vh;
+    align-items: baseline;
+}
+
+#login-car-image-container {position: relative;width: 13.20rem;height: 9.27rem;z-index: 1;top: 45%;left: 0%;
+}#login-car-image {max-width: 100%;max-height: 100%; }
+
+#login-vector-one-container{position: absolute;z-index: 0;width: 9.91rem;height: 11.56rem;top: 50%;
+}#login-vector-one-image{max-width: 100%;max-height: 100%;}
+
+#login-vector-two-container{position: absolute;z-index: 0;width: 6.75rem;height: 9.20rem;top: 61%;
+}#login-vector-two-image{max-width: 100%;max-height: 100%;}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#login-form-subcontainer {
+    max-width: 8rem;
+    max-height: 15.79rem;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    padding: 0.5rem 2rem 0 2rem;
+    width: 100%;
+}
+
+#alucar-logo-img{scale: 1;padding-top: 0.8rem;}
+
+form{
+    font-family: var(--primary-font-family);
+    font-size: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+label {
+    margin: 0.1rem 0 0.1rem 0;
+    font-family: var(--primary-font-family);
+    font-size: 0.35rem;
+    font-weight: 500;
+}
+
+#login-form-subcontainer input[type="email"],
+#login-form-subcontainer input[type="password"] {
+    padding: 0.25rem;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: inset 0px 0px 1px 1px #dbdbda81;
+    border-radius: 0.15rem;
+    opacity: 0.25;
+}
+
+#remember-me-label{
+    align-self: start;
+}
+
+#login-form-subcontainer button[type="submit"] {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 0.25rem;
+    border: none;
+    cursor: pointer;
+}
+
+#login-form-subcontainer div {
+    text-align: center;
+    margin: 0.25rem 0;
+}
+#login-form-subcontainer div span {
+    display: inline-block;
+    width: 100%;
+    font-size: 0.25rem; 
+}
+#login-form-subcontainer div hr {
+    margin: 0.25rem 0;
+    font-size: 0.25rem;
+}
+
+#login-form-subcontainer .google-login {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 0rem;
+}
+
+#login-form-subcontainer .google-login img {
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+#login-form-subcontainer .register-link {
+    margin-top: 2rem;
+}
+
+#forgot-password{
+    font-size: 0;
+}
