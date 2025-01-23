@@ -66,6 +66,7 @@ label {
 }
 
 #login-form-subcontainer input[type="email"],
+#login-form-subcontainer input[type="text"],
 #login-form-subcontainer input[type="password"] {
     padding: 0.25rem;
     width: 90%;
@@ -77,6 +78,27 @@ label {
 
 #remember-me-label{
     align-self: start;
+}
+
+.togglePasswordButton-hide{
+    position: relative;
+    top: -50%;
+    left: 35%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url(/Components/Login_Screen/assets/visibility_off.svg) no-repeat center;
+    border: 1px solid white;
+}
+
+.togglePasswordButton-view{
+    position: relative;
+    top: -50%;
+    left: 35%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><text y="20" font-size="20">👁️</text></svg>') no-repeat center center;
+    background-size: contain;
+    border: 1px solid white;
 }
 
 #login-form-subcontainer button[type="submit"] {
