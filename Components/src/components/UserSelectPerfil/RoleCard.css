@@ -1,0 +1,71 @@
+.role-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .role-card.light {
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .role-card.dark {
+    background-color: #21201E;
+    color: #ffffff;
+  }
+  
+  .role-card-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .role-card-content ul {
+    margin-top: 50px;
+    text-align: start;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .role-card-content ul li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .role-card-content ul li span {
+    margin-right: 10px;
+  }
+  
+  .role-button {
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .role-button.light-btn {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .role-button.dark-btn {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .role-image {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+  
