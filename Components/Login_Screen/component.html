@@ -1,18 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <title>Alucar - Login</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Project_Files/CSS/reset.css">
-        <link rel="stylesheet" href="/Project_Files/CSS/patterns.css">
-        <link rel="stylesheet" href="/Components/Login_Screen/component.css">
-        <!-- Ícone.io -->
-        <link rel="shortcut icon" href="/Project_Files/CSS/favicon.svg" type="image/x-icon">
-        <link rel="icon" type="image/svg" sizes="32x32" href="/Project_Files/CSS/favicon.svg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Project_Files/CSS/reset.css">
+    <link rel="stylesheet" href="/Project_Files/CSS/patterns.css">
+    <link rel="stylesheet" href="/Components/Login_Screen/component.css">
+    <link rel="stylesheet" href="/Components/Login_Screen/component.css">
+    <!-- Ícone.io -->
+    <link rel="shortcut icon" href="/Project_Files/CSS/favicon.svg" type="image/x-icon">
+    <link rel="icon" type="image/svg" sizes="32x32" href="/Project_Files/CSS/favicon.svg">
 </head>
+
 <body>
-    <div>aa</div>
+    <section id="left-login-container">
+        <div id="login-car-image-container">
+            <img id="login-car-image" src="/Components/Login_Screen/assets/carro 2.svg"
+                alt="Imagem ilustrativa de um carro!">
+        </div>
+        <div id="login-vector-one-container">
+            <img id="login-vector-one-image" src="/Components/Login_Screen/assets/Vector 1.svg" alt=".">
+        </div>
+        <div id="login-vector-two-container">
+            <img id="login-vector-two-image" src="/Components/Login_Screen/assets/Vector 2.svg" alt=".">
+        </div>
+    </section>
+    <section id="right-login-container">
+        <div id="login-form-subcontainer">
+            <div id="alucar-logo-img">
+                <img src="/Components/Login_Screen/assets/Group 41.svg" alt="ALUCAR Logo">
+            </div>
+            <form action="/login" method="post">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="password">Senha:</label>
+                <div>
+                    <input type="password" id="password" name="password" required>
+                    <button id="toggleButton" class="togglePasswordButton-view" type="button" onclick="togglePasswordVisibility()"></button><br>
+                </div>
+                <div id="remember-me-label">
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    <label for="remember-me">Lembrar-me</label>
+                </div>                    
+                <a id="forgot-password" href="/forgot-password">Esqueci minha senha</a><br>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <div>
+                <span>Ou entre com</span><hr><hr>
+            </div>
+            <div>
+                <button type="button" class="google-login" onclick="loginWithGoogle()">
+                    <img src="google-logo.png" alt="Google Logo"> Google 
+                </button>
+            </div>
+            <div class="register-link">
+                <span>Não possui uma conta? <a href="/register">Registre-se agora!</a></span>
+            </div>
+        </div>
+    </section>
+    <script src="/Components/Login_Screen/script.js"></script>
 </body>
+
 </html>
