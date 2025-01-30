@@ -17,7 +17,6 @@ const RoleCard = ({ title, descriptionList, buttonText, image, isDark }) => {
           {buttonText}
         </button>
       </div>
-      {image && <img src={image} alt={`${title} illustration`} className="role-image" />}
     </div>
   );
 };
