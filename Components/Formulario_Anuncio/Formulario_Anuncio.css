@@ -1,0 +1,316 @@
+* {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-container {
+  padding: .6rem 1.2rem;
+  max-width: 60%;
+}
+
+.form-container h3 {
+  font-size: .5rem;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .4rem .4rem .8rem .4rem;
+  border-bottom: 1px solid #858585;
+}
+
+.form-container form .input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.form-container form .input label,
+.form-container form .input p {
+  font-size: .3rem;
+  font-weight: 500;
+}
+
+.form-container form .input input[type="text"],
+.form-container form .input input[type="number"],
+.form-container form .input select,
+.form-container form .input textarea {
+  overflow: visible;
+  width: 100%;
+  height: .85rem;
+  color: #e5e5e5;
+  font-size: .3125rem;
+  line-height: .3125rem;
+  font-family: var(--primary-font-family);
+  padding: .2rem;
+  border: 2px solid #E5E5E5;
+  border-radius: 10px;
+  transition: all .3s ease;
+}
+
+.form-container form .input select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.form-container form .input select ~ svg {
+  position: absolute;
+  font-size: .3125rem;
+  left: calc(100% - .5rem);
+  bottom: calc(.425rem - (.3125rem / 2)); /*centraliza verticalmente com base na altura do icone e do input*/
+  color: #E5E5E5;
+  transition: all .3s ease;
+}
+
+.form-container form .input select:focus ~ svg {
+  color: #000;
+}
+
+.form-container form .input textarea {
+  min-height: 2rem;
+  resize: none;
+}
+
+.form-container form .input input[type="text"]::placeholder,
+.form-container form .input input[type="email"]::placeholder,
+.form-container form .input input[type="tel"]::placeholder {
+  color: #e5e5e5;
+}
+
+.form-container form .input .input-file-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: .25rem;
+}
+
+.form-container form .input .file-container {
+  width: 2.2rem;
+  height: 3.25rem;
+  background: #e5e5e5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-container form .input .file-container .file-infos {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  padding: .25rem;
+  overflow: hidden;
+}
+
+.form-container form .input .file-container .file-infos p.name {
+  font-size: .25rem;
+  font-weight: 400;
+}
+
+.form-container form .input .file-container .file-infos p.size {
+  font-size: .23rem;
+  font-weight: 300;
+}
+
+.form-container form .input .file-container .file-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form .input .file-container .file-buttons button {
+  border: none;
+  outline: none;
+  font-size: .25rem;
+  padding: .15rem;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.form-container form .input .file-container .file-buttons button.download {
+  background: #D2D2D2;
+}
+
+.form-container form .input .file-container .file-buttons button.download:hover {
+  background: #B1B1B1;
+}
+
+.form-container form .input .file-container .file-buttons button.remove {
+  background: #E71F1F;
+  border-radius: 0 0 10px 10px;
+  color: #fff;
+}
+
+.form-container form .input .file-container .file-buttons button.remove:hover {
+  background: #b91919;
+}
+
+.form-container form .input .input-files label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 3.25rem;
+  background: #e5e5e5;
+  border-radius: 10px;
+  border: 2px dashed #B1B1B1;
+  cursor: pointer;
+}
+
+.form-container form .input .input-files label p {
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: .3rem;
+  font-weight: 500;
+  background: transparent;
+}
+
+.form-container form .input .input-files label p.drop-file {
+  display: none;
+  font-size: .25rem;
+  font-weight: 400;
+  gap: 4px;
+}
+
+.form-container form .input .input-files label.dragover p.drop-file {
+  display: flex;
+}
+
+.form-container form .input .input-files label.dragover p.chose-file {
+  display: none;
+}
+
+.form-container form .input .input-files label svg {
+  font-size: .45rem;
+}
+
+.form-container form .input .input-files label p.drop-file svg {
+  font-size: .35rem;
+}
+
+.form-container form .input .input-files input {
+  display: none;
+}
+
+.form-container form .input input:focus-within,
+.form-container form .input select:focus,
+.form-container form .input textarea:focus-within {
+  color: #000;
+  border: 2px solid #000;
+  outline: none;
+}
+
+.form-container form .input > p.info {
+  padding-left: 5px;
+  font-size: .27rem;
+  font-weight: 400;
+  border-left: 2px solid #21201E;
+}
+
+.form-container form .input.input-check h5 {
+  font-size: .3rem;
+  font-weight: 500;
+}
+
+.form-container form .input.input-check .check {
+  display: flex;
+  gap: .25rem;
+  flex-direction: column;
+}
+
+.form-container form .input.input-check .check .hidden {
+  display: none;
+}
+
+.form-container form .input.input-check .check .check-container {
+  display: flex;
+  gap: .25rem;
+  align-items: center;
+  flex-direction: row;
+}
+
+.form-container form .input.input-check .check .check-container input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  background: transparent;
+  height: .4rem;
+  width: .4rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  transition: all .3s ease;
+}
+
+.form-container form .input.input-check .check .check-container input[type="checkbox"]:checked::after {
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  content: "\f00c";
+  font-weight: 900;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.form-container form .input.input-check .check .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: all .3s ease;
+}
+
+.form-container form .button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container form .button-container button {
+  padding: .25rem;
+  border-radius: 10px;
+  background: #71E166;
+  font-size: .3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.form-container form .button-container button:hover {
+  background: #5ec455;
+}
+
+.form-container form .button-container p {
+  font-size: .25rem;
+}
+
+@media screen and (max-width: 920px) {
+  .form-container {
+    max-width: 100%;
+  }
+
+  .form-container form .input input[type="text"],
+  .form-container form .input input[type="number"],
+  .form-container form .input select,
+  .form-container form .input textarea {
+    padding: .13rem;
+    border-radius: 5px;
+    border: 1px solid #E5E5E5;
+  }
+
+  .form-container form .input input:focus-within,
+  .form-container form .input select:focus,
+  .form-container form .input textarea:focus-within {
+    border: 1px solid #000;
+  }
+}
