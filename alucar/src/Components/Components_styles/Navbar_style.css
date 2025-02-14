@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Outfit1';
+  src: url('../../assets/Outfit-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit2';
+  src: url('../../assets/Outfit-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+#link {
+  font-size: 1em;
+  font-family: 'Outfit1', sans-serif;
+}
+
+#btn1, #btn2 {
+  font-size: 0.85em;
+  font-family: 'Outfit2', sans-serif;
+  padding: 10px 20px;
+}
+
+#btn1 {
+  background-color: #21201E;
+  border: none;
+}
+
+#btn2 {
+  background-color: #FFA733;
+  color: white;
+}
+
+#btn2:hover {
+  background-color: rgb(228, 136, 16);
+}
+
+#btn1:hover {
+  background-color: rgb(33, 32, 30, 0.8);
+}
+
+@media (max-width: 991px) {
+  #navbar-nav {
+      flex-direction: column;
+      justify-content: center !important; 
+  }
+
+  #menuLinks {
+      display: flex;
+      justify-content: center !important;
+  }
+
+  #menuLinks ul {
+      display: flex;
+      align-items: center !important;
+  }
+
+  #btnLinks {
+    display: flex;
+    justify-content: center !important;
+  }
+}
