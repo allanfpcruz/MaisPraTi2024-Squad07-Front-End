@@ -1,21 +1,28 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "react-datepicker/dist/react-datepicker.css"
 import './App.css'
-import Navbar from './Components/Navbar'
-import Banner from './Components/Banner'
-import Search from './Components/Search'
-import Como_Funciona from "./Components/Como_Funciona"
-import Footer from "./Components/Footer"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from "./Pages/Home"
+import Login from "./Pages/Login"
+import Cadastro from "./Pages/Cadastro"
 
 function App() {
   return (
     <>
-      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <Navbar />
       <Banner />
       <Search /> 
       <Como_Funciona />
-      {/* o footer esta com algum problema de estilização */}
-      {/* <Footer /> */}
+      <Testimonials />
+      o footer esta com algum problema de estilização
+      <Footer /> */}
     </>
   )
 }

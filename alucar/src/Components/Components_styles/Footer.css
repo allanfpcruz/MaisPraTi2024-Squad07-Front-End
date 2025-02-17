@@ -17,7 +17,7 @@
     height: 100%;
     font-family: 'Outfit', sans-serif;
     line-height: 1.6;
-    background: var(--accent-color);
+    /* background: var(--accent-color); */
   }
   
   body {

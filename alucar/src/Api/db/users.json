@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "admin",
+    "email": "admin@gmail.com",
+    "password": 1234
+  },
+  {
+    "id": 2,
+    "name": "admin2",
+    "email": "admin2@gmail.com",
+    "password": 9876
+  },
+  {
+    "id": "564462b3-6e94-42f2-be38-6f93a03b7540",
+    "name": "admin3",
+    "email": "admin3@gmail.com",
+    "password": 9876
+  },
+  {
+    "name": "Allan",
+    "email": "allanfel@gmail.com",
+    "password": 44444,
+    "id": "e7a183f3-e969-420f-a939-6e677c4b9a5e"
+  }
+]
