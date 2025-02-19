@@ -10,10 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fastify/cors": "^10.0.2",
+    "bcryptjs": "^3.0.0",
+    "fastify": "^5.2.1",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-datepicker": "^8.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
+    "swiper": "^11.2.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
