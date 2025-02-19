@@ -1,7 +1,7 @@
 //import './Components_styles/LoginForm.css'
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
-import { UseUsers } from '../Hooks/UseUsers';
+import { sendForm as createUser, loginUser } from '../Hooks/UseUsers'
 
 function LoginForm(props) {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
@@ -22,21 +22,18 @@ function LoginForm(props) {
     })
   }
 
-  const sendForm = async (e) => {
+  const sendForm = (e) => {
     e.preventDefault()
-    try {
-      const response = fetch('http://localhost:5050/users', {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData),
-      })
-      const json = (await response).json()
-      console.log(json)
-    } catch(error) {
-      console.error(error)
+    if(formData.email === '' || formData.password === '' || (props.form === 'cadastro' && formData.name === '')) {
+      console.error('ERRO: preencha todos os campos')
+      return
     }
+    props.form == 'cadastro' ? createUser(formData) : loginUser(formData)
+    setFormData({
+      name: '',
+      email: '',
+      password: ''
+    })
   }
 
   return(
@@ -87,7 +84,7 @@ function LoginForm(props) {
               <label for="remember-me">Lembrar-me</label>
             </div>                    
             <a id="forgot-password" href="/forgot-password">Esqueci minha senha</a><br/>
-            <button type="submit">Cadastrar</button>
+            <button type="submit" onClick={(e) => {sendForm(e)}}>Cadastrar</button>
           </form>
             <div>
               <span>Ou entre com</span><hr></hr>

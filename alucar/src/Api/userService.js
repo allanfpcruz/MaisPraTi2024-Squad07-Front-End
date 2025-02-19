@@ -1,7 +1,6 @@
-const URL = 'db/users.json'
 import { readFile } from 'node:fs/promises'
 import { writeFileSync } from 'node:fs';
-//import { bcrypt } from 'bcryptjs'
+import bcrypt from 'bcryptjs'
 import { randomUUID } from 'node:crypto'
 import { fileURLToPath } from 'url';
 import path from 'path';
@@ -21,22 +20,26 @@ async function getUsers () {
 }
 
 async function addUser(user) {
-  //users recebe um array com a lista de usuarios ja cadastrados
-  const users = await getUsers()
-  //verifica se ja existe algum usuario com o email referido, se sim, retorna a funcao
-  if(users.some(usurario => usurario.email === user.email)) {
-    return 'Email já cadatrado'
+  try{
+    //users recebe um array com a lista de usuarios ja cadastrados
+    const users = await getUsers()
+    //verifica se ja existe algum usuario com o email referido, se sim, retorna a funcao
+    if(users.some(usurario => usurario.email === user.email)) {
+      throw new Error('Email já cadatrado')
+    }
+    //criptografa a senha
+    const cryptoPassword = bcrypt.hashSync(user.password, 10)
+    //cria um id unico para cada user
+    const userId = randomUUID()
+    //atualiza o usuario e a lista de usuarios
+    user.password = cryptoPassword
+    user.id = userId
+    users.push(user)
+    //salva no arquivo
+    saveUsers(users)
+  } catch(error) {
+    throw error
   }
-  //criptografa a senha
-  //const cryptoPassword = bcrypt.hashSync(user.password, 10)
-  //cria um id unico para cada user
-  const userId = randomUUID()
-  //atualiza o usuario e a lista de usuarios
-  //user.password = cryptoPassword
-  user.id = userId
-  users.push(user)
-  //salva no arquivo
-  saveUsers(users)
 }
 
 function saveUsers(users) {

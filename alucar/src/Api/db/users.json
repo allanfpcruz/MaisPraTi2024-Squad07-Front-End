@@ -6,21 +6,21 @@
     "password": 1234
   },
   {
-    "id": 2,
-    "name": "admin2",
-    "email": "admin2@gmail.com",
-    "password": 9876
+    "name": "Allan Felipe Pereira da Cruz",
+    "email": "adq@gmail.com",
+    "password": "$2b$10$Si/xmvMECQEV0VwkXZy4yuT/ShWzmfWl0qLZ.gxLk.Q5bMIrn0NtS",
+    "id": "1b96d0c4-76d1-4d59-b38a-4658ea565df2"
   },
   {
-    "id": "564462b3-6e94-42f2-be38-6f93a03b7540",
-    "name": "admin3",
-    "email": "admin3@gmail.com",
-    "password": 9876
+    "name": "Allan Felipe Pereira da Cruz",
+    "email": "allanfpcruz@outlook.com",
+    "password": "$2b$10$1Bc1Ukn0J0zBdVug.WQxteTjg/KZDyx0u3aXy5y4eU9yrSo1U8dNS",
+    "id": "1d3a907f-b7a1-49b0-bf5e-a872b32b6b62"
   },
   {
-    "name": "Allan",
-    "email": "allanfel@gmail.com",
-    "password": 44444,
-    "id": "e7a183f3-e969-420f-a939-6e677c4b9a5e"
+    "name": "Allan Felipe Pereira da Cruz",
+    "email": "af4379307@gmail.com",
+    "password": "$2b$10$zdMTiSrFjZKgSL1z6Rn5C.XjHffRa2E2rax6QHdeuwbH8h2gSi3tC",
+    "id": "7c0b0c42-a193-433a-9a72-e44b94d67b16"
   }
 ]

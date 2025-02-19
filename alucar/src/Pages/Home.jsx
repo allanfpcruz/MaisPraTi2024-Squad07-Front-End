@@ -1,19 +1,11 @@
-import Navbar from '../Components/Navbar'
-import Banner from '../Components/Banner'
-import Search from '../Components/Search'
-import Como_Funciona from "../Components/Como_Funciona"
-import Testimonials from "../Components/Testimonials"
-import Footer from "../Components/Footer"
+import Logged_Navbar from "../Components/Logged_Navbar"
+import Sidebar from "../Components/Sidebar"
 
 function Home() {
-  return (
+  return(
     <>
-      <Navbar />
-      <Banner />
-      <Search /> 
-      <Como_Funciona />
-      <Testimonials />
-      <Footer />
+      <Logged_Navbar />
+      <Sidebar />
     </>
   )
 }

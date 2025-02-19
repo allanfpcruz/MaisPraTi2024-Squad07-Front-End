@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fastify/cors": "^10.0.2",
     "bcryptjs": "^3.0.0",
     "fastify": "^5.2.1",
     "react": "^19.0.0",

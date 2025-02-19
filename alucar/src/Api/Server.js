@@ -1,24 +1,30 @@
 import { fastify } from 'fastify'
-import { addUser, getUsers } from './ApiUsers.js'
+import { addUser, getUsers } from './userService.js'
+import cors from '@fastify/cors'
 
-const server = fastify({ logger: true })
+const server = fastify({ logger: true });
+
+await server.register(cors, {
+  origin: "*",
+  methods: ["GET", "POST"] // Permite requisições do frontend
+});
 
 // Define uma rota GET na raiz
 server.get('/', async (request, reply) => {
   return { message: 'Servidor Fastify rodando!' };
 });
 
-server.get('/users', async () => {
+server.get('/users', async (request, reply) => {
   return getUsers()
 })
 
 server.post('/users', async (request, reply) => {
   const user = await request.body
   try {
-    addUser(user)
-    return reply.status(201).send()
+    await addUser(user)
+    return reply.status(201).send({ message: "Usuário criado com sucesso" })
   } catch(error) {
-    console.error(error)
+    return reply.status(400).send({ error: error.message })
   }
 })
 
