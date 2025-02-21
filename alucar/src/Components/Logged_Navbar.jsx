@@ -1,5 +1,6 @@
 import './Components_styles/Logged_Navbar.css'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import alucarLogo from '../assets/AlucarLogo.png'
@@ -10,10 +11,12 @@ import CaretDown from '../assets/Caret Down.png';
 import addIcon from '../assets/add.png';
 import logoutIcon from '../assets/Logout 04.png';
 import settingsIcon from '../assets/Settings.png';
+import { userContext } from '../Context/userContext';
 
 function Logged_Navbar() {
   const [isDropdownUserOpen, setIsDropdownUserOpen] = useState(false);
 	const [isDropdownNotifOpen, setIsDropdownNotifOpen] = useState(false);
+  const { setLoggedUser } = useContext(userContext)
 
 	const toggleDropdown = () => {
 		setIsDropdownUserOpen(!isDropdownUserOpen);
@@ -22,6 +25,16 @@ function Logged_Navbar() {
 	const toggleDropdownNotif = () => {
 		setIsDropdownNotifOpen(!isDropdownNotifOpen);
 	}
+
+  const logout = () => {
+    setLoggedUser({})
+    goTo('')
+  }
+
+  const navigate = useNavigate()
+  const goTo = (path) => {
+    navigate(`/${path}`)
+  }
 
   return(
     <>
@@ -60,7 +73,7 @@ function Logged_Navbar() {
                                   
                         <div className="d-flex ms-auto" id='btnLinks'>
                             <button className="btn btn-light border border-secondary me-2 rounded-1 d-flex align-items-center justify-content-center" onClick={toggleDropdown} id='btn1'><img src=""/>Usuário<img className='ms-2' src={CaretDown} style={{ height: '23px' }}/></button>
-                            <button className="btn rounded-1 d-flex align-items-center justify-content-center" id='btn2'><img className='me-2' src={addIcon} style={{ height: '12px' }}/>Criar Anúncio</button>
+                            <button className="btn rounded-1 d-flex align-items-center justify-content-center" id='btn2' onClick={() => goTo('criar-anuncio')}><img className='me-2' src={addIcon} style={{ height: '12px' }}/>Criar Anúncio</button>
       
                     {isDropdownUserOpen && (
                       <div className={`bg-white position-absolute mt-5 p-2 bg-light border border-secondary rounded-1`}>
@@ -69,7 +82,7 @@ function Logged_Navbar() {
                             <a href="#" className="nav-link" id='dropdownUser'><img className='me-1' src={settingsIcon} alt="ícone de configuração" style={{ height: '22px' }}/>Configurações</a>
                             </li>
                             <li className="">
-                            <a href="#" className="nav-link" id='dropdownUser'><img className='me-1' src={logoutIcon} alt="ícone de sair" style={{ height: '22px' }}/>Sair</a>
+                            <a href="#" className="nav-link" id='dropdownUser' onClick={logout}><img className='me-1' src={logoutIcon} alt="ícone de sair" style={{ height: '22px' }} />Sair</a>
                             </li>
                         </ul>
                         </div>

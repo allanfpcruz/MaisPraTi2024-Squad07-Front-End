@@ -1,7 +1,7 @@
 //import './Components_styles/LoginForm.css'
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
-import { sendForm as createUser, loginUser } from '../Hooks/UseUsers'
+import useUsers from '../Hooks/UseUsers';
 
 function LoginForm(props) {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
@@ -10,6 +10,7 @@ function LoginForm(props) {
     email: '',
     password: ''
   })
+  const { createUser, loginUser } = useUsers()
 
   const togglePasswordVisibility = () => {
     isPasswordVisible ? setIsPasswordVisible(false) : setIsPasswordVisible(true)
@@ -84,7 +85,7 @@ function LoginForm(props) {
               <label for="remember-me">Lembrar-me</label>
             </div>                    
             <a id="forgot-password" href="/forgot-password">Esqueci minha senha</a><br/>
-            <button type="submit" onClick={(e) => {sendForm(e)}}>Cadastrar</button>
+            <button type="submit" onClick={(e) => {sendForm(e)}}>{props.form === 'cadastro' ? 'Cadastrar': 'Entrar'}</button>
           </form>
             <div>
               <span>Ou entre com</span><hr></hr>
