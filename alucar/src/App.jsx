@@ -6,6 +6,7 @@ import LandingPage from "./Pages/Landing_Page"
 import Home from "./Pages/Home"
 import Login from "./Pages/Login"
 import Cadastro from "./Pages/Cadastro"
+import CriarAnuncio from "./Pages/CriarAnuncio"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/criar-anuncio" element={<CriarAnuncio />} />
         </Routes>
       </BrowserRouter>
     </>
