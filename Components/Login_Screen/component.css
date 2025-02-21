@@ -19,14 +19,6 @@ body {
     height: 100vh;
 }
 
-#right-login-container {
-    display: inherit;
-    flex-flow: column;
-    max-width: 15rem;
-    height: 100vh;
-    align-items: baseline;
-}
-
 #login-car-image-container {position: relative;width: 13.20rem;height: 9.27rem;z-index: 1;top: 45%;left: 0%;
 }#login-car-image {max-width: 100%;max-height: 100%; }
 
@@ -38,6 +30,13 @@ body {
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+#right-login-container {
+    display: inherit;
+    flex-flow: column;
+    max-width: 15rem;
+    height: 100vh;
+    align-items: baseline;
+}
 #login-form-subcontainer {
     max-width: 8rem;
     max-height: 15.79rem;
@@ -45,10 +44,12 @@ body {
     flex-flow: column;
     margin: 0 auto;
     padding: 0.5rem 2rem 0 2rem;
-    width: 100%;
-}
+    width: 100%;}
 
-#alucar-logo-img{scale: 1;padding-top: 0.8rem;}
+#alucar-logo-img{
+    scale: 1;
+    padding-top: 0.8rem;
+}
 
 form{
     font-family: var(--primary-font-family);
@@ -68,16 +69,35 @@ label {
 #login-form-subcontainer input[type="email"],
 #login-form-subcontainer input[type="text"],
 #login-form-subcontainer input[type="password"] {
-    padding: 0.25rem;
     width: 90%;
+    padding: 0.25rem;
     margin: 0 auto;
     box-shadow: inset 0px 0px 1px 1px #dbdbda81;
     border-radius: 0.15rem;
     opacity: 0.25;
 }
 
+#login-form-subcontainer button[type="submit"] {
+    width: 100%;
+    padding: 0.25rem;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
 #remember-me-label{
     align-self: start;
+}
+
+#forgot-password{
+    position: relative;
+    left: 60%;
+    bottom: 10%;
+    font-size: 0.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-color);}
+    #forgot-password:hover{text-decoration: underline;
 }
 
 .togglePasswordButton-hide{
@@ -99,15 +119,6 @@ label {
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><text y="20" font-size="20">👁️</text></svg>') no-repeat center center;
     background-size: contain;
     border: 1px solid white;
-}
-
-#login-form-subcontainer button[type="submit"] {
-    width: 100%;
-    background-color: black;
-    color: white;
-    padding: 0.25rem;
-    border: none;
-    cursor: pointer;
 }
 
 #login-form-subcontainer div {
@@ -144,6 +155,3 @@ label {
     margin-top: 2rem;
 }
 
-#forgot-password{
-    font-size: 0;
-}

@@ -1,20 +1,24 @@
-import '../../../Project_Files/CSS/patterns.css'
-import './Sidebar.css'
-import { LuCalendarCheck } from "react-icons/lu"
-import { FaTelegramPlane } from "react-icons/fa"
-import { FaWhatsapp } from "react-icons/fa"
-import { FaInstagram } from "react-icons/fa"
+import '../../../Project_Files/CSS/patterns.css';
+import './Sidebar.css';
+import { FaRegCalendarCheck } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import userImage from '../../assets/images/user.jpg';
 
 function Sidebar() {
-  return(
+  return (
     <>
       <div className="sidebar">
         <div className="user-container">
+          <p className='since'>
+            <FaRegCalendarCheck /> <span>Membro desde 2024</span>
+          </p>
+          <img src={userImage} alt="imagem do usuário" />
+          <h3>Gaspar Zinho</h3>
           <p>São Paulo - SP</p>
-          <img src="user_image.jpg" alt="imagem do usuário" />
-          <h3>Usuário 1</h3>
-          <p className='since'><LuCalendarCheck /><span>Membro desde 2016</span></p>
         </div>
+        <p className="avaliation">Avaliações (120)</p>
         <div className="like-container">
           <div className="liked">
             <p><span>Curtiu</span> <span className='like-number'>42</span></p>
@@ -23,7 +27,6 @@ function Sidebar() {
             <p><span>Curtidas</span> <span className='like-number'>210</span></p>
           </div>
         </div>
-        <p className="avaliation">Avaliações (120)</p>
         <div className="icons">
           <FaTelegramPlane />
           <FaWhatsapp />
@@ -31,7 +34,7 @@ function Sidebar() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

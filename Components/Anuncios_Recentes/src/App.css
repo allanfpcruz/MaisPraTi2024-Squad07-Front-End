@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Outfit1';
+    src: url('./assets/Outfit-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit2';
+    src: url('./assets/Outfit-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+#container{
+    background-color: #F2F7F6;
+}
+
+#card{
+    height: 400px;
+    width: 300px;
+}
+
+#title{
+    font-family: 'Outfit2', sans-serif;
+}
+
+#subtitle{
+    font-family: 'Outfit1', sans-serif;
+}
+
+div p {
+    font-family: 'Outfit1', sans-serif; 
+    font-size: 18px;
+    color: rgb(0, 0, 0, 0.49);
+}
