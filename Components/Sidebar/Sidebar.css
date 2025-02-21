@@ -5,8 +5,8 @@
 }
 
 .sidebar {
-  width: 6.5rem;
-  height: 100%;
+  width: 5.2rem;
+  height: 100vh;
   padding: .725rem 1.45rem 1.45rem 1.45rem;
   background: var(--primary-color);
   display: flex;
@@ -24,39 +24,39 @@
 }
 
 .sidebar .user-container p {
-  font-size: 0.37rem;
+  font-size: 0.27rem;
   color: #fff;
 }
 
 .sidebar .user-container img {
-  width: 3.7rem;
-  height: 3.7rem;
+  width: 2.7rem;
+  height: 2.7rem;
   border: 3px solid var(--secondary-color);
   border-radius: 9px;
 }
 
 .sidebar .user-container h3 {
-  font-size: .42rem;
+  font-size: .37rem;
   color: #fff;
 }
 
 .sidebar .user-container p.since {
   display: flex;
   align-items: center;
-  font-size: .33rem;
+  font-size: .23rem;
   gap: 5px;
 }
 
 .sidebar .like-container {
   display: flex;
-  flex-direction: column;
-  gap: .75rem;
+  flex-direction: row;
+  gap: .45rem;
 }
 
 .sidebar .like-container .liked,
 .sidebar .like-container .likes {
-  width: 2.25rem;
-  height: 1.55rem;
+  width: 1.55rem;
+  height: 1rem;
   background: var(--secondary-color);
   border-radius: 14px;
   display: flex;
@@ -66,7 +66,7 @@
 
 .sidebar .like-container .liked p,
 .sidebar .like-container .likes p {
-  font-size: .37rem;
+  font-size: .27rem;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -77,12 +77,12 @@
 
 .sidebar .like-container .liked p span.like-number,
 .sidebar .like-container .likes p span.like-number {
-  font-size: .5rem;
+  font-size: .4rem;
   font-weight: 700;
 }
 
 .sidebar .avaliation {
-  font-size: .37rem;
+  font-size: .30rem;
   color: #39A6FF;
   cursor: pointer;
   transition: all .3s ease;
@@ -99,7 +99,7 @@
 }
 
 .sidebar .icons svg {
-  font-size: .7rem;
+  font-size: .5rem;
   color: #fff;
   cursor: pointer;
   transition: all .3s ease;
