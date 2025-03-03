@@ -4,10 +4,10 @@ import "./Components_styles/Banner.css";
 export class Banner extends Component {
   render() {
     return (
-      <section>
+      <section className="banner-container">
         <div className="banner-text">
           <div className="banner-badge">
-            <img src="./verified.svg" alt="icon" />
+            <img src="./src/assets/verified.png" alt="icon" />
             <p>A plataforma de aluguel 100% confiável!</p>
           </div>
           <h1>
@@ -15,7 +15,7 @@ export class Banner extends Component {
           </h1>
         </div>
         <div className="banner-image">
-          <img src="./fiat-argo.svg" alt="Carro" />
+          <img src="./src/assets/fiat-argo.png" alt="Carro" />
         </div>
       </section>
     );

@@ -1,10 +1,11 @@
-section {
+.banner-container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   gap: 2em;
-  height: auto;
-  background: url("../../assets/background-banner.svg") no-repeat center;
-  background-size: cover;
+  background: url("../../assets/background-banner.svg") no-repeat;
+  background-size: 100% 100%;
 }
 
 .banner-text {
@@ -55,53 +56,4 @@ section {
 .banner-image img {
   max-width: 100%;
   height: auto;
-}
-
-/* Responsividade */
-@media (min-width: 768px) {
-  section {
-    flex-direction: row;
-    height: 41.43em;
-  }
-
-  .banner-text {
-    width: 50%;
-    margin-left: 5.37em;
-    align-items: flex-start;
-  }
-
-  .banner-text h1 {
-    text-align: left;
-  }
-
-  .banner-image {
-    width: 50%;
-  }
-}
-
-@media (max-width: 767px) {
-  .banner-text {
-    margin-top: 2em;
-    align-items: center;
-  }
-
-  .banner-text h1 {
-    font-size: 1.75em;
-    max-width: 17.5em;
-    margin-top: 1em;
-  }
-
-  .banner-badge p {
-    font-size: 1em;
-  }
-
-  section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .banner-text,
-  .banner-image {
-    width: 100%;
-  }
 }

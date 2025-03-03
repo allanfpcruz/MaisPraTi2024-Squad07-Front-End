@@ -6,7 +6,7 @@
   border: 1px solid #e0e0e0; /* Adiciona uma borda */
   border-radius: 8px;
   padding: 20px 30px;
-  max-width: 400px; /* Card mais largo */
+  max-width: 430px; /* Card mais largo */
   color: #1c1c1c;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left; /* Texto alinhado à esquerda */
@@ -20,6 +20,7 @@
   position: absolute;
   top: 0px; /* Posiciona acima */
   left: 28px;
+  z-index: 9999;
 }
 
 .photo-position {
@@ -63,14 +64,14 @@
   max-width: 280px;
   font-style: italic;
   color: #555;
-  height: 60px; /* Altura máxima para o comentário */
+  height: 70px; /* Altura máxima para o comentário */
   overflow: hidden; /* Garante que o texto não ultrapasse o espaço */
 }
 
 @media (max-width: 768px) {
   .testimonial-card {
     padding: 20px;
-    max-width: 100%; /* Garante que o card ocupe toda a largura da tela */
+    max-width: 100%;
   }
 
   .testimonial-photo {

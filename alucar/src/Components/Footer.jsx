@@ -16,7 +16,7 @@ function Footer() {
         <div className="container">
           <div className="logo-links">
             <div className="logo">
-              <img src="img/logo 2.png" alt="AluCar Logo"/>
+              <img src="./src/assets/AlucarLogo.png" alt="AluCar Logo"/>
             </div>
             <div className="social-media">
               <a href="#"><i className="fab fa-linkedin"></i></a>
