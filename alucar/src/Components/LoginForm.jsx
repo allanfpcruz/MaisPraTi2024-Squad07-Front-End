@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import useUsers from '../Hooks/UseUsers';
+import "./Components_styles/LoginForm.css";
 
 function LoginForm(props) {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
@@ -41,20 +42,20 @@ function LoginForm(props) {
     <>
       <section id="left-login-container">
         <div id="login-car-image-container">
-            <img id="login-car-image" src="/Components/Login_Screen/assets/carro 2.svg"
+            <img id="login-car-image" src="./src/assets/carro 2.svg"
                 alt="Imagem ilustrativa de um carro!"/>
         </div>
         <div id="login-vector-one-container">
-            <img id="login-vector-one-image" src="/Components/Login_Screen/assets/Vector 1.svg" alt="."/>
+            <img id="login-vector-one-image" src="./src/assets/Vector 1.svg" alt="."/>
         </div>
         <div id="login-vector-two-container">
-            <img id="login-vector-two-image" src="/Components/Login_Screen/assets/Vector 2.svg" alt="." />
+            <img id="login-vector-two-image" src="./src/assets/Vector 2.svg" alt="." />
         </div>
       </section>
       <section id="right-login-container">
         <div id="login-form-subcontainer">
           <div id="alucar-logo-img">
-            <img src="/Components/Login_Screen/assets/Group 41.svg" alt="ALUCAR Logo" />
+            <img src="./src/assets/Group 41.svg" alt="ALUCAR Logo" />
           </div>
           <form action="/login" method="post">
             {props.form === 'cadastro' ?

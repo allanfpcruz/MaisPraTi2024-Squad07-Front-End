@@ -1,4 +1,4 @@
-:root{
+:root {
   --login-background-color: #f5f7f6;
 }
 
@@ -27,14 +27,45 @@
   align-items: baseline;
 }
 
-#login-car-image-container {position: relative;width: 13.20rem;height: 9.27rem;z-index: 1;top: 45%;left: 0%;
-}#login-car-image {max-width: 100%;max-height: 100%; }
+#login-car-image-container {
+  position: relative;
+  width: 13.20rem;
+  height: 9.27rem;
+  z-index: 1;
+  top: 45%;
+  left: 0%;
+}
 
-#login-vector-one-container{position: absolute;z-index: 0;width: 9.91rem;height: 11.56rem;top: 50%;
-}#login-vector-one-image{max-width: 100%;max-height: 100%;}
+#login-car-image {
+  max-width: 100%;
+  max-height: 100%;
+}
 
-#login-vector-two-container{position: absolute;z-index: 0;width: 6.75rem;height: 9.20rem;top: 61%;
-}#login-vector-two-image{max-width: 100%;max-height: 100%;}
+#login-vector-one-container {
+  position: absolute;
+  z-index: 0;
+  width: 9.91rem;
+  height: 11.56rem;
+  top: 50%;
+}
+
+#login-vector-one-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#login-vector-two-container {
+  position: absolute;
+  z-index: 0;
+  width: 6.75rem;
+  height: 9.20rem;
+  top: 61%;
+}
+
+#login-vector-two-image {
+  max-width: 100%;
+  max-height: 100%;
+}
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -48,9 +79,12 @@
   width: 100%;
 }
 
-#alucar-logo-img{scale: 1;padding-top: 0.8rem;}
+#alucar-logo-img {
+  scale: 1;
+  padding-top: 0.8rem;
+}
 
-form{
+form {
   font-family: var(--primary-font-family);
   font-size: 0.5rem;
   display: flex;
@@ -76,21 +110,21 @@ label {
   opacity: 0.25;
 }
 
-#remember-me-label{
+#remember-me-label {
   align-self: start;
 }
 
-.togglePasswordButton-hide{
+.togglePasswordButton-hide {
   position: relative;
   top: -50%;
   left: 35%;
   width: 0.5rem;
   height: 0.5rem;
-  background: url(/Components/Login_Screen/assets/visibility_off.svg) no-repeat center;
+  background: url(src/assets/visibility_off.svg) no-repeat center;
   border: 1px solid white;
 }
 
-.togglePasswordButton-view{
+.togglePasswordButton-view {
   position: relative;
   top: -50%;
   left: 35%;
@@ -114,11 +148,13 @@ label {
   text-align: center;
   margin: 0.25rem 0;
 }
+
 #login-form-subcontainer div span {
   display: inline-block;
   width: 100%;
-  font-size: 0.25rem; 
+  font-size: 0.25rem;
 }
+
 #login-form-subcontainer div hr {
   margin: 0.25rem 0;
   font-size: 0.25rem;
@@ -144,6 +180,6 @@ label {
   margin-top: 2rem;
 }
 
-#forgot-password{
+#forgot-password {
   font-size: 0;
 }

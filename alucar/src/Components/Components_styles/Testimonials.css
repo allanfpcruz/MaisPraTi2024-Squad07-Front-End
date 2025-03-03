@@ -6,9 +6,9 @@ body {
   text-align: center;
   background-color: #1a1a1a;
   background-image: 
-    url('../../assets/images/listralarga.svg'),
-    url('../../assets/images/listramedia.svg'),
-    url('../../assets/images/listracurta.svg');
+    url('../../assets/listralarga.svg'),
+    url('../../assets/listramedia.svg'),
+    url('../../assets/listracurta.svg');
   background-repeat: no-repeat;
   background-position: 
     110% bottom, /* Primeira listra a direita, ajustada com vw para maior flexibilidade */

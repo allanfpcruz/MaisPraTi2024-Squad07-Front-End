@@ -5,7 +5,7 @@ export class Card extends Component {
 	render() {
 		const formData = this.props.formData
 		return (
-			<section>
+			<section className="card-container">
 				<div className="content">
 					<img
 						src="./chevrolet-tracker-rs-2024.png"

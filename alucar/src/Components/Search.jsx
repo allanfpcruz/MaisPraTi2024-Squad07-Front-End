@@ -83,7 +83,7 @@ export default function Search() {
           />
         </div>
         <button className="search-button" onClick={handleSearch}>
-          <img src="./search.svg" alt="search" className="search-icon" />
+          <img src="./src/assets/search.png" alt="search" className="search-icon" />
           Pesquisar
         </button>
       </div>

@@ -31,6 +31,11 @@
 #btn2 {
   background-color: #FFA733;
   color: white;
+  border: none;
+}
+
+#link:hover {
+  color: #FFA733;
 }
 
 #btn2:hover {
