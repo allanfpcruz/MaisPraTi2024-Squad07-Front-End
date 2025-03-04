@@ -6,7 +6,7 @@
   max-width: 83em;
   margin: -5em auto;
 
-  background-color: #ffffff;
+  background-color: var(--quaternary-color);
   box-shadow: 0px 4px 11.3px 0px #00000026;
   border-radius: 1.0625em;
 
@@ -32,7 +32,7 @@
   justify-content: center;
   align-items: baseline;
   flex-grow: 1;
-
+  
   flex-direction: column;
 }
 
@@ -61,8 +61,8 @@
 .search-content button.search-button {
   width: 8.25em;
   height: 3.0625em;
-  background-color: #ffa733;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--quaternary-color);
   display: flex;
   justify-content: center;
   align-items: center;

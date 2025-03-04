@@ -1,28 +1,29 @@
-body {
-  font-family: 'Outfit', sans-serif;
-}
-
 .testimonials-section {
+  font-family: var(--primary-font-family);
   text-align: center;
-  background-color: #1a1a1a;
-  background-image: 
+  background-color: var(--secondary-color);
+  background-image:
     url('../../assets/listralarga.svg'),
     url('../../assets/listramedia.svg'),
     url('../../assets/listracurta.svg');
   background-repeat: no-repeat;
-  background-position: 
-    110% bottom, /* Primeira listra a direita, ajustada com vw para maior flexibilidade */
-    95% bottom, /* Segunda listra a direita */
-    0% bottom; /* Terceira listra no canto esquerdo inferior */
+  background-position:
+    105% bottom,
+    /* Primeira listra a direita, ajustada com vw para maior flexibilidade */
+    93% bottom,
+    /* Segunda listra a direita */
+    0% bottom;
+  /* Terceira listra no canto esquerdo inferior */
   background-size: auto;
-  color: white;
+  color: var(--quaternary-color);
   padding: 50px 20px;
 }
 
 .testimonials-title {
   font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: var(--quaternary-color);
 }
 
 .testimonials-subtitle {
@@ -41,8 +42,8 @@ body {
 }
 
 .testimonial-card {
-  background-color: #ffffff;
-  color: #333333;
+  background-color: var(--quaternary-color);
+  color: var(--secondary-color);
   border-radius: 8px;
   padding: 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -59,7 +60,7 @@ body {
   position: absolute;
   top: 25px;
   left: 20px;
-  border: 3px solid #ffffff;
+  border: 3px solid var(--quaternary-color);
 }
 
 .testimonial-card h3 {
@@ -90,8 +91,9 @@ body {
 
 @media (min-width: 1024px) {
   .testimonials-section {
-    background-position: 
-      105% bottom, /* Ajustando as imagens para telas maiores */
+    background-position:
+      105% bottom,
+      /* Ajustando as imagens para telas maiores */
       95% bottom,
       0% bottom;
   }
@@ -99,8 +101,9 @@ body {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .testimonials-section {
-    background-position: 
-      120% bottom, /* Ajustando para telas de tablet */
+    background-position:
+      120% bottom,
+      /* Ajustando para telas de tablet */
       95% bottom,
       0% bottom;
   }
@@ -108,8 +111,9 @@ body {
 
 @media (min-width: 480px) and (max-width: 767px) {
   .testimonials-section {
-    background-position: 
-      160% bottom, /* Ajustando para telas pequenas */
+    background-position:
+      160% bottom,
+      /* Ajustando para telas pequenas */
       105% bottom,
       0% bottom;
   }
@@ -117,8 +121,9 @@ body {
 
 @media (max-width: 479px) {
   .testimonials-section {
-    background-position: 
-      180% bottom, /* Ajustando para telas muito pequenas (celulares menores) */
+    background-position:
+      180% bottom,
+      /* Ajustando para telas muito pequenas (celulares menores) */
       110% bottom,
       0% bottom;
   }

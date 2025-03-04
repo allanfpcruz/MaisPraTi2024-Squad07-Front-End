@@ -60,7 +60,8 @@ export default function Search() {
           </Form.Select>
         </div>
         <div className="search-label">
-          <label htmlFor="search">Data de Retirada</label>
+          <label htmlFor="search"></label>
+          Data de Retirada
           <DatePicker
             dateFormat={"dd/MM/yyyy"}
             selectsStart
