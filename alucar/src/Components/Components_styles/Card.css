@@ -1,7 +1,7 @@
 .card-container {
   width: 396px;
   height: 541px;
-  background-color: #fff;
+  background-color: var(--quaternary-color);
   border-radius: 8px;
 }
 

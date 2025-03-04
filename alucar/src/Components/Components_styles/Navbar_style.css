@@ -1,36 +1,23 @@
-@font-face {
-  font-family: 'Outfit1';
-  src: url('../../assets/Outfit-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Outfit2';
-  src: url('../../assets/Outfit-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
 #link {
   font-size: 1em;
-  font-family: 'Outfit1', sans-serif;
+  font-family: var(--primary-font-family);
 }
 
 #btn1, #btn2 {
   font-size: 0.85em;
-  font-family: 'Outfit2', sans-serif;
+  font-family: var(--primary-font-family);
+  font-weight: 600;
   padding: 10px 20px;
 }
 
 #btn1 {
-  background-color: #21201E;
+  background-color: var(--secondary-color);
   border: none;
 }
 
 #btn2 {
-  background-color: #FFA733;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--quaternary-color);
   border: none;
 }
 

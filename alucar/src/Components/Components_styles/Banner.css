@@ -1,11 +1,20 @@
 .banner-container {
+  font-family: var(--primary-font-family);
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: space-between;
-  gap: 2em;
-  background: url("../../assets/background-banner.svg") no-repeat;
-  background-size: 100% 100%;
+  gap: var(--rem-devices-700);
+  background-image: 
+    url('../../assets/listralarga.svg'),
+    url('../../assets/listramedia.svg'),
+    url('../../assets/listracurta.svg');
+  background-repeat: no-repeat;
+  background-position: 
+    105% bottom, /* Primeira listra a direita, ajustada com vw para maior flexibilidade */
+    93% bottom, /* Segunda listra a direita */
+    0% bottom; /* Terceira listra no canto esquerdo inferior */
+  background-size: auto;
 }
 
 .banner-text {
@@ -20,12 +29,13 @@
 .banner-text h1 {
   font-size: 2.19em;
   line-height: 1.1;
+  font-weight: bold;
   margin-block: 0.5em;
   text-align: center;
 }
 
 .banner-text span {
-  color: #ffa733;
+  color: var(--primary-color);
 }
 
 .banner-badge {
