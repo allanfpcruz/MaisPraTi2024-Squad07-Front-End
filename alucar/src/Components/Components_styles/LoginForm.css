@@ -132,13 +132,13 @@ label {
   height: 0.5rem;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><text y="20" font-size="20">👁️</text></svg>') no-repeat center center;
   background-size: contain;
-  border: 1px solid white;
+  border: 1px solid var(--quaternary-color);
 }
 
 #login-form-subcontainer button[type="submit"] {
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--quaternary-color);
   padding: 0.25rem;
   border: none;
   cursor: pointer;
@@ -161,7 +161,7 @@ label {
 }
 
 #login-form-subcontainer .google-login {
-  background-color: white;
+  background-color: var(--quaternary-color);
   border: 1px solid #ccc;
   padding: 0.5rem;
   display: flex;

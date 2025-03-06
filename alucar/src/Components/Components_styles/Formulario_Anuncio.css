@@ -71,7 +71,7 @@
 }
 
 .form-container form .input select:focus~svg {
-  color: #000;
+  color: var(--secondary-color);
 }
 
 .form-container form .input textarea {
@@ -144,7 +144,7 @@
 .form-container form .input .file-container .file-buttons button.remove {
   background: #E71F1F;
   border-radius: 0 0 10px 10px;
-  color: #fff;
+  color: var(--quaternary-color);
 }
 
 .form-container form .input .file-container .file-buttons button.remove:hover {
@@ -206,8 +206,8 @@
 .form-container form .input input:focus-within,
 .form-container form .input select:focus,
 .form-container form .input textarea:focus-within {
-  color: #000;
-  border: 2px solid #000;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   outline: none;
 }
 
@@ -247,7 +247,7 @@
   background: transparent;
   height: .4rem;
   width: .4rem;
-  border: 2px solid black;
+  border: 2px solid var(--secondary-color);
   border-radius: 5px;
   transition: all .3s ease;
 }
@@ -312,6 +312,6 @@
   .form-container form .input input:focus-within,
   .form-container form .input select:focus,
   .form-container form .input textarea:focus-within {
-    border: 1px solid #000;
+    border: 1px solid var(--secondary-color);
   }
 }

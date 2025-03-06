@@ -37,7 +37,7 @@
   gap: 8px;
   padding: 8px 16px;
   background-color: #f2f2f2;
-  color: #000;
+  color: var(--secondary-color);
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
