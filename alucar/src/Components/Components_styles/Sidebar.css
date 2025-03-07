@@ -1,14 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .sidebar {
-  width: 6.5rem;
-  height: 100%;
+  width: 18%;
+  height: 100vh;
   padding: .725rem 1.45rem 1.45rem 1.45rem;
-  background: var(--primary-color);
+  background: var(--secondary-color);
   display: flex;
   flex-direction: column;
   gap: .75rem;
@@ -24,40 +18,40 @@
 }
 
 .sidebar .user-container p {
-  font-size: 0.37rem;
+  font-size: var(--font-size-370);
   color: var(--quaternary-color);
 }
 
 .sidebar .user-container img {
-  width: 3.7rem;
-  height: 3.7rem;
-  border: 3px solid var(--secondary-color);
+  width: 8.7rem;
+  height: 8.7rem;
+  border: 3px solid var(--primary-color);
   border-radius: 9px;
 }
 
 .sidebar .user-container h3 {
-  font-size: .42rem;
+  font-size: var(--font-size-370);
   color: var(--quaternary-color);
 }
 
 .sidebar .user-container p.since {
   display: flex;
   align-items: center;
-  font-size: .33rem;
+  font-size: var(--font-size-300);
   gap: 5px;
 }
 
 .sidebar .like-container {
   display: flex;
   flex-direction: column;
-  gap: .75rem;
+  gap: .90rem;
 }
 
 .sidebar .like-container .liked,
 .sidebar .like-container .likes {
-  width: 2.25rem;
-  height: 1.55rem;
-  background: var(--secondary-color);
+  width: 5rem;
+  height: 4rem;
+  background: var(--primary-color);
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -66,7 +60,7 @@
 
 .sidebar .like-container .liked p,
 .sidebar .like-container .likes p {
-  font-size: .37rem;
+  font-size: var(--font-size-370);
   color: var(--quaternary-color);
   display: flex;
   flex-direction: column;
@@ -77,19 +71,19 @@
 
 .sidebar .like-container .liked p span.like-number,
 .sidebar .like-container .likes p span.like-number {
-  font-size: .5rem;
+  font-size: var(--font-size-300);
   font-weight: 700;
 }
 
 .sidebar .avaliation {
-  font-size: .37rem;
+  font-size: var(--font-size-370);
   color: var(--tertiary-color);
   cursor: pointer;
   transition: all .3s ease;
 }
 
 .sidebar .avaliation:hover {
-  color: #338fda;
+  color: var(--tertiary-color);
 }
 
 .sidebar .icons {
@@ -99,7 +93,7 @@
 }
 
 .sidebar .icons svg {
-  font-size: .7rem;
+  font-size: var(--font-size-900);
   color: var(--quaternary-color);
   cursor: pointer;
   transition: all .3s ease;
