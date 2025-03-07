@@ -1,5 +1,5 @@
 import './Components_styles/Formulario_Anuncio.css'
-//import '../../../Project_Files/CSS/Patterns.css'
+import '../../../Project_Files/CSS/Patterns.css'
 import { useEffect, useState } from 'react'
 import { TbFolderPlus, TbHandFinger } from "react-icons/tb";
 import { LuDownload } from "react-icons/lu";

@@ -79,7 +79,7 @@ function Logged_Navbar() {
                       <div className={`bg-white position-absolute mt-5 p-2 bg-light border border-secondary rounded-1`}>
                         <ul className="list-unstyled mb-0">
                             <li className="mb-2">
-                            <a href="#" className="nav-link" id='dropdownUser'><img className='me-1' src={settingsIcon} alt="ícone de configuração" style={{ height: '22px' }}/>Configurações</a>
+                            <a href="#" className="nav-link" id='dropdownUser' onClick={() => goTo('configuration')}><img className='me-1' src={settingsIcon} alt="ícone de configuração" style={{ height: '22px' }} />Configurações</a>
                             </li>
                             <li className="">
                             <a href="#" className="nav-link" id='dropdownUser' onClick={logout}><img className='me-1' src={logoutIcon} alt="ícone de sair" style={{ height: '22px' }} />Sair</a>

@@ -1,0 +1,176 @@
+.car-card {
+  width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+  text-align: center;
+  position: relative;
+}
+
+.main-image {
+  position: relative;
+}
+
+.car-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 115px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.car-info {
+  padding: 15px 0;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.car-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+}
+
+.car-details span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pricing {
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.documents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.document-card {
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 30%;
+}
+
+.document-card p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.document-card span {
+  font-size: 10px;
+  color: #666;
+}
+
+.download-button {
+  background: #ddd;
+  border: none;
+  padding: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 5px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.edit-button,
+.orders-button,
+.delete-button {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-button {
+  background: black;
+  color: white;
+}
+
+.orders-button {
+  background: #ddd;
+  color: black;
+}
+
+.delete-button {
+  background: red;
+  color: white;
+}
+
+.edit-button:hover {
+  background: #333;
+}
+
+.delete-button:hover {
+  background: darkred;
+}

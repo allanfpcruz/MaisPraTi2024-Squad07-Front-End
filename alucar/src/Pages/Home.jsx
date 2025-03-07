@@ -14,6 +14,9 @@ function Home() {
     <>
       <Logged_Navbar />
       <Sidebar />
+      <main>
+        
+      </main>
     </>
   )
 }
