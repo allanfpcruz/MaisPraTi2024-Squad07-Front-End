@@ -6,7 +6,10 @@ import LandingPage from "./Pages/Landing_Page"
 import Home from "./Pages/Home"
 import Login from "./Pages/Login"
 import Cadastro from "./Pages/Cadastro"
+import Locador_Locatario from "./Pages/Locador_Locatario"
 import CriarAnuncio from "./Pages/CriarAnuncio"
+import EditarAnuncio from "./Pages/EditarAnuncio"
+import Configuration from "./Pages/Configuration"
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/home" element={<Home />} />
           <Route path="/criar-anuncio" element={<CriarAnuncio />} />
+          <Route path="/editar-anuncio" element={<EditarAnuncio />} />
+          <Route path="/locador-locatario" element={<Locador_Locatario />} />
+          <Route path="/configuration" element={<Configuration />} />
         </Routes>
       </BrowserRouter>
     </>

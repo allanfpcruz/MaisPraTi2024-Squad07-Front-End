@@ -1,5 +1,6 @@
 //import './Components_styles/LoginForm.css'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import useUsers from '../Hooks/UseUsers';
 import "./Components_styles/LoginForm.css";
@@ -11,7 +12,7 @@ function LoginForm(props) {
     email: '',
     password: ''
   })
-  const { createUser, loginUser } = useUsers()
+  const { loginUser } = useUsers()
 
   const togglePasswordVisibility = () => {
     isPasswordVisible ? setIsPasswordVisible(false) : setIsPasswordVisible(true)
@@ -30,13 +31,15 @@ function LoginForm(props) {
       console.error('ERRO: preencha todos os campos')
       return
     }
-    props.form == 'cadastro' ? createUser(formData) : loginUser(formData)
+    props.form == 'cadastro' ? navigate('/locador-locatario', { state: formData }) : loginUser(formData)
     setFormData({
       name: '',
       email: '',
       password: ''
     })
   }
+
+  const navigate = useNavigate()
 
   return(
     <>

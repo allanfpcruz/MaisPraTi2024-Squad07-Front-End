@@ -1,0 +1,131 @@
+.car-card {
+  width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+  text-align: center;
+  position: relative;
+}
+
+.main-image {
+  position: relative;
+}
+
+.car-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 115px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.car-info {
+  padding: 15px 0;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.car-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+}
+
+.car-details span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 13px;
+}
+
+.pricing p {
+  margin-bottom: 0;
+}
+
+.pricing h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #f2f2f2;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  height: 47px;
+}
+
+.rent-button {
+  width: 100%;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.rent-button:hover {
+  background: #333;
+}
