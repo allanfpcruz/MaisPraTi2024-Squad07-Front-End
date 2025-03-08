@@ -4,7 +4,7 @@
 }
 
 .form-container h3 {
-  font-size: .5rem;
+  font-size: var(--font-size-ultra-small);
 }
 
 .form-container form {

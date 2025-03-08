@@ -1,4 +1,5 @@
 .car-card {
+  margin-top: 40px;
   width: 400px;
   background: var(--quaternary-color);
   border-radius: 12px;
