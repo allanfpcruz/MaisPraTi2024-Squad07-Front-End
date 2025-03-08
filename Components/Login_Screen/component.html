@@ -42,6 +42,15 @@
                     <input type="password" id="password" name="password" required>
                     <button id="toggleButton" class="togglePasswordButton-view" type="button" onclick="togglePasswordVisibility()"></button><br>
                 </div>
+                <div>
+                    <span>Ou entre com</span><hr><hr>
+                    <button type="button" class="google-login" onclick="loginWithGoogle()">
+                        <img src="./assets/google-logo.svg" alt="Google Logo"> Google 
+                    </button>
+                </div>
+                <div class="register-link">
+                    <span>Não possui uma conta? <a href="/register">Registre-se agora!</a></span>
+                </div>
                 <div id="remember-me-label">
                     <input type="checkbox" id="remember-me" name="remember-me">
                     <label for="remember-me">Lembrar-me</label>
@@ -49,17 +58,6 @@
                 </div>                    
                 <button type="submit">Cadastrar</button>
             </form>
-            <div>
-                <span>Ou entre com</span><hr><hr>
-            </div>
-            <div>
-                <button type="button" class="google-login" onclick="loginWithGoogle()">
-                    <img src="google-logo.png" alt="Google Logo"> Google 
-                </button>
-            </div>
-            <div class="register-link">
-                <span>Não possui uma conta? <a href="/register">Registre-se agora!</a></span>
-            </div>
         </div>
     </section>
     <script src="/Components/Login_Screen/script.js"></script>

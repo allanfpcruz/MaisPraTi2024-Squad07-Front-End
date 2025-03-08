@@ -25,7 +25,7 @@ async function addUser(user) {
     const users = await getUsers()
     //verifica se ja existe algum usuario com o email referido, se sim, retorna a funcao
     if(users.some(usurario => usurario.email === user.email)) {
-      throw new Error('Email já cadatrado')
+      throw new Error('Email já cadastrado')
     }
     //criptografa a senha
     const cryptoPassword = bcrypt.hashSync(user.password, 10)
