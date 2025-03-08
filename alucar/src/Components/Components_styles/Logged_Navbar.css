@@ -27,6 +27,11 @@
   
 }
 
+#btn1 {
+  background-color: var(--quaternary-color);
+  color: var(--secondary-color);
+}
+
 #btn2 {
   background-color: var(--primary-color);
   color: var(--quaternary-color);
@@ -38,6 +43,7 @@
 
 #btn1:hover {
   background-color: var(--quaternary-color);
+  color: var(--secondary-color);
 }
 
 @media (max-width: 991px) {

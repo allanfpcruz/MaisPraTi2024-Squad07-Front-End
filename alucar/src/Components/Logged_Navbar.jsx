@@ -72,7 +72,7 @@ function Logged_Navbar() {
                   </div>
                                   
                         <div className="d-flex ms-auto" id='btnLinks'>
-                            <button className="btn btn-light border border-secondary me-2 rounded-1 d-flex align-items-center justify-content-center" onClick={toggleDropdown} id='btn1'><img src=""/>Usuário<img className='ms-2' src={CaretDown} style={{ height: '23px' }}/></button>
+                            <button className="btn btn-light border border-secondary me-2 rounded-1 d-flex align-items-center justify-content-center" onClick={toggleDropdown} id='btn1'><img src=""/>Renan P.<img className='ms-2' src={CaretDown} style={{ height: '23px' }}/></button>
                             <button className="btn rounded-1 d-flex align-items-center justify-content-center" id='btn2' onClick={() => goTo('criar-anuncio')}><img className='me-2' src={addIcon} style={{ height: '12px' }}/>Criar Anúncio</button>
       
                     {isDropdownUserOpen && (
