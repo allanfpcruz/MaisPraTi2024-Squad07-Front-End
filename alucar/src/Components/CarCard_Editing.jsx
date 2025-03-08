@@ -1,4 +1,4 @@
-import './Components_styles/CarCard_Editing_Favorite.css'
+import './Components_styles/CarCard_Editing.css'
 
 const CarCard_Editing = (props) => {
 	const formData = props.formData
