@@ -1,6 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import './Components_styles/CarCard.css'
 
 const CarCard = () => {
+	const navigate = useNavigate()
+	const goTo = (path) => {
+		navigate(`/${path}`)
+	}
 	return (
 		<div className="car-card">
 			<div className="image-gallery">
@@ -80,7 +85,7 @@ const CarCard = () => {
 			</div>
 
 			<div className="action-buttons">
-				<button className="edit-button">
+				<button className="edit-button" onClick={() => goTo('editar-anuncio')}>
 					<img src="./edit.svg" alt="edit" className="icon" />
 					Editar anúncio
 				</button>

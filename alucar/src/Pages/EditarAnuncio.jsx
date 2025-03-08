@@ -3,7 +3,7 @@ import Formulario_Anuncio from "../Components/Formulario_Anuncio"
 import CarCard_Editing from "../Components/CarCard_Editing"
 import Logged_Navbar from "../Components/Logged_Navbar"
 
-function CriarAnuncio() {
+function EditarAnuncio() {
   const [formData, setFormData] = useState({
     nome: '',
     local: '',
@@ -23,10 +23,10 @@ function CriarAnuncio() {
   return (
     <>
       <Logged_Navbar />
-      <Formulario_Anuncio formData={formData} setFormData={setFormData} type='Criar' />
+      <Formulario_Anuncio formData={formData} setFormData={setFormData} type='Editar' />
       <CarCard_Editing formData={formData} />
     </>
   )
 }
 
-export default CriarAnuncio
+export default EditarAnuncio

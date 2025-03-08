@@ -1,16 +1,9 @@
 [
   {
     "name": "Allan Felipe Pereira da Cruz",
-    "email": "af4379307@gmail.com",
-    "password": "$2b$10$0yQV2qEInT9MVgDGvMnwJelWfpl3J6r2XiqmJu7C7SXa/ra2OYd7a",
-    "perfil": "locatário",
-    "id": "cb8cb9a3-d459-4a92-a6c3-5c41931d564c"
-  },
-  {
-    "name": "Joginho",
-    "email": "allanfe.pereira@gmail.com",
-    "password": "$2b$10$OLDPBFldxrJiu1IHL4ad7uxMnkw0hm9e3T0LAZ2NJtMaWd663.gzG",
+    "email": "allanfpcruz@outlook.com",
+    "password": "$2b$10$QOvsYvZAEk2d/lRHJm4uAuj3mJSiBSfEGljt2oDkpITr7tAy26Acy",
     "perfil": "locador",
-    "id": "39584a08-b977-48c9-9fad-d9441f6d683f"
+    "id": "f416d1b3-4faf-485b-a1c2-1058505788fb"
   }
 ]

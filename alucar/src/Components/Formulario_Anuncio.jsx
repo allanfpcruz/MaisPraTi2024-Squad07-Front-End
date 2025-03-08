@@ -5,7 +5,7 @@ import { TbFolderPlus, TbHandFinger } from "react-icons/tb";
 import { LuDownload } from "react-icons/lu";
 import { IoIosArrowDown } from "react-icons/io";
 
-function Formulario_Anuncio({ formData, setFormData }) {
+function Formulario_Anuncio({ formData, setFormData, type }) {
   const [fileList, setFileList] = useState([])
 
   useEffect(() => {
@@ -62,7 +62,7 @@ function Formulario_Anuncio({ formData, setFormData }) {
   return(
       <>
         <div className="form-container">
-          <h3>Configuração de Perfil</h3>
+          <h3>{type} Anúncio</h3>
           <form>
             <div className="input">
               <label htmlFor="name">Nome do Anúncio*</label>
@@ -248,7 +248,7 @@ function Formulario_Anuncio({ formData, setFormData }) {
               </textarea>
             </div>
             <div className="button-container">
-              <button type="submit">Criar Anúncio</button>
+              <button type="submit">{type == 'Criar' ? 'Criar Anúncio' : 'Salvar Alterações'}</button>
               <p>Campos obrigatórios*</p>
             </div>
           </form>

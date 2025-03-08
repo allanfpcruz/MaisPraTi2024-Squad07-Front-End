@@ -1,10 +1,10 @@
 import CarCard from "./CarCard"
 
 function MyAds() {
-  const quantidade = ['anuncio1', 'anuncio2']
+  const anuncios = ['anuncio1', 'anuncio2']
   return(
     <>
-      {quantidade.map((anuncio) => (
+      {anuncios.map((anuncio) => (
         <CarCard />
       ))}
     </>

@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import './Components_styles/Card.css'
 
-export class Card extends Component {
+export class CarCard_Favorite extends Component {
 	render() {
 		const formData = this.props.formData
 		return (
@@ -63,4 +63,4 @@ export class Card extends Component {
 	}
 }
 
-export default Card
+export default CarCard_Favorite

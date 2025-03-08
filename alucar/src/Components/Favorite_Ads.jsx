@@ -1,10 +1,10 @@
-import CarCard_Editing_Favorite from "./CarCard_Editing_Favorite";
+import CarCard_Favorite from "./CarCard_Favorite";
 
 function Favortie_Ads() {
-  const quantidade = ['anuncio1', 'anuncio2', 'anuncio3']
+  const anuncios = ['anuncio1', 'anuncio2', 'anuncio3']
   return(
-    quantidade.map((anuncio) => (
-      <CarCard_Editing_Favorite />
+    anuncios.map((anuncio) => (
+      <CarCard_Favorite />
     ))
   )
 }
