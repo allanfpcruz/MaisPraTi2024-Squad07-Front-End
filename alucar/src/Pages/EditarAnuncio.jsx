@@ -1,24 +1,17 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Formulario_Anuncio from "../Components/Formulario_Anuncio"
 import CarCard_Editing from "../Components/CarCard_Editing"
 import Logged_Navbar from "../Components/Logged_Navbar"
+import { useLocation } from "react-router-dom"
 
 function EditarAnuncio() {
-  const [formData, setFormData] = useState({
-    nome: '',
-    local: '',
-    cambio: 'Manual',
-    quilometragem: '',
-    combustivel: 'Álcool',
-    altcombustivel: 'Álcool',
-    potencia: '',
-    sistemadirecao: 'Hidráulico',
-    numpassageiros: 0,
-    placa: '',
-    valor: '',
-    documentos: [],
-    descricao: ''
-  })
+  const location = useLocation()
+  let ads = location.state
+  const [formData, setFormData] = useState({ ...ads })
+
+  useEffect(() => {
+    console.log(formData)
+  }, [])
 
   return (
     <>

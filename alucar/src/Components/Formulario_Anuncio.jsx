@@ -1,5 +1,6 @@
 import './Components_styles/Formulario_Anuncio.css'
-
+import '../../../Project_Files/CSS/Patterns.css'
+import useCars from "../Hooks/UseCars"
 import { useEffect, useState } from 'react'
 import { TbFolderPlus, TbHandFinger } from "react-icons/tb";
 import { LuDownload } from "react-icons/lu";
@@ -7,10 +8,10 @@ import { IoIosArrowDown } from "react-icons/io";
 
 function Formulario_Anuncio({ formData, setFormData, type }) {
   const [fileList, setFileList] = useState([])
+  const { createAds, updateAds } = useCars()
 
   useEffect(() => {
     formData.documentos = fileList
-    console.log(formData)
   }, [fileList])
 
   const handleChange = (e) => {
@@ -59,6 +60,13 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
     return `${bytes.toFixed(2)} ${units[unitIndex]}`;
   }
 
+  //envia o formulario
+  const sendForm = () => {
+    type == 'Criar' ? 
+      createAds(formData)
+    : updateAds(formData, formData.id)
+  }
+
   return(
       <>
         <div className="form-container">
@@ -70,7 +78,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
                 type="text" 
                 id="name"
                 name='nome'
-                value={formData.nome}
+                value={formData.title}
                 onChange={handleChange}
                 required />
             </div>
@@ -81,7 +89,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
                 id="local"
                 name='local' 
                 placeholder='Bairro - Cidade'
-                value={formData.local}
+                value={formData.location}
                 onChange={handleChange}
                 required/>
             </div>
@@ -90,7 +98,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <select 
                 id="cambio"
                 name='cambio'
-                value={formData.cambio}
+                value={formData.transmission}
                 onChange={handleChange}>
                 <option value="Manual" selected>Manual</option>
                 <option value="Automático">Automático</option>
@@ -106,7 +114,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
                 id="km"
                 name='quilometragem' 
                 placeholder='Número aproximado'
-                value={formData.quilometragem}
+                value={formData.mileage}
                 onChange={handleChange}
                 required/>
             </div>
@@ -115,7 +123,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <select 
                 id="combustivel"
                 name='combustivel'
-                value={formData.combustivel}
+                value={formData.main_fuel}
                 onChange={handleChange}>
                 <option value="Álcool" selected>Álcool</option>
                 <option value="Gasolina">Gasolina</option>
@@ -129,7 +137,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <select 
                 id="alt-combustivel"
                 name='altcombustivel'
-                value={formData.altcombustivel}
+                value={formData.secundary_fuel}
                 onChange={handleChange}>
                 <option value="Álcool" selected>Álcool</option>
                 <option value="Gasolina">Gasolina</option>
@@ -144,7 +152,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
                 type="text" 
                 id="pot"
                 name='potencia'
-                value={formData.potencia}
+                value={formData.engine_power}
                 onChange={handleChange}
                 required />
             </div>
@@ -153,7 +161,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <select 
                 id="sist"
                 name='sistemadirecao'
-                value={formData.sistemadirecao}
+                value={formData.steering_system}
                 onChange={handleChange}>
                 <option value="Hidráulico" selected>Hidráulico</option>
                 <option value="Elétrico">Elétrico</option>
@@ -169,7 +177,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
                 min={1} 
                 max={8}
                 name='numpassageiros'
-                value={formData.numpassageiros}
+                value={formData.number_of_seats}
                 onChange={handleChange}
                 required/>
             </div>
@@ -179,7 +187,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
                 type="text" 
                 id="plate"
                 name='placa'
-                value={formData.placa}
+                value={formData.plate}
                 onChange={handleChange}
                 required />
             </div>
@@ -189,7 +197,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
                 type="text" 
                 id="price"
                 name='valor'
-                value={formData.valor}
+                value={formData.daily_rent_value}
                 onChange={handleChange}
                 required />
             </div>
@@ -248,7 +256,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               </textarea>
             </div>
             <div className="button-container">
-              <button type="submit">{type == 'Criar' ? 'Criar Anúncio' : 'Salvar Alterações'}</button>
+              <button type="submit" onClick={sendForm}>{type == 'Criar' ? 'Criar Anúncio' : 'Salvar Alterações'}</button>
               <p>Campos obrigatórios*</p>
             </div>
           </form>

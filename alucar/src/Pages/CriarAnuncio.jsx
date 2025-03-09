@@ -5,19 +5,19 @@ import Logged_Navbar from "../Components/Logged_Navbar"
 
 function CriarAnuncio() {
   const [formData, setFormData] = useState({
-    nome: '',
-    local: '',
-    cambio: 'Manual',
-    quilometragem: '',
-    combustivel: 'Álcool',
-    altcombustivel: 'Álcool',
-    potencia: '',
-    sistemadirecao: 'Hidráulico',
-    numpassageiros: 0,
-    placa: '',
-    valor: '',
-    documentos: [],
-    descricao: ''
+    title: '',
+    location: '',
+    transmission: 'Manual',
+    mileage: '',
+    main_fuel: 'Álcool',
+    secundary_fuel: 'Álcool',
+    engine_power: '',
+    steering_system: 'Hidráulico',
+    number_of_seats: 0,
+    plate: '',
+    daily_rent_value: '',
+    photos: [],
+    desciption: ''
   })
 
   return (

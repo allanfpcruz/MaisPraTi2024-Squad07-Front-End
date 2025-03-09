@@ -4,15 +4,18 @@ import { LuCalendarCheck } from "react-icons/lu"
 import { FaTelegramPlane } from "react-icons/fa"
 import { FaWhatsapp } from "react-icons/fa"
 import { FaInstagram } from "react-icons/fa"
+import { useContext } from 'react'
+import { userContext } from '../Context/userContext'
 
 function Sidebar() {
+  const { loggedUser } = useContext(userContext)
   return(
     <>
       <div className="sidebar">
         <div className="user-container">
           <p>São Paulo - SP</p>
           <img src="./src/assets/1h.png" alt="imagem do usuário" />
-          <h3>Renan Pires</h3>
+          <h3>{loggedUser.name}</h3>
           <p className='since'><LuCalendarCheck /><span>Membro desde 2024</span></p>
         </div>
         <div className="like-container">
