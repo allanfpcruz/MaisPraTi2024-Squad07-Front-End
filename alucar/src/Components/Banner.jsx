@@ -11,7 +11,7 @@ export class Banner extends Component {
             <p>A plataforma de aluguel 100% confiável!</p>
           </div>
           <h1>
-            O CARRO QUE VOCÊ TANTO PROCURA <span>ESTÁ AQUI</span>!
+            O CARRO QUE VOCÊ TANTO PROCURA <span>ESTÁ AQUI!</span>
           </h1>
         </div>
         <div className="banner-image">

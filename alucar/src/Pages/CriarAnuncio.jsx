@@ -23,8 +23,18 @@ function CriarAnuncio() {
   return (
     <>
       <Logged_Navbar />
-      <Formulario_Anuncio formData={formData} setFormData={setFormData} type='Criar' />
-      <CarCard_Editing formData={formData} />
+      <div
+        className="ad-cont"
+        style={{
+          display: "flex",
+          gap: "20px",
+          justifyContent: "center",
+          alignItems: "flex-center",
+        }}
+      >
+        <Formulario_Anuncio formData={formData} setFormData={setFormData} type="Criar" />
+        <CarCard_Editing formData={formData} />
+      </div>
     </>
   )
 }

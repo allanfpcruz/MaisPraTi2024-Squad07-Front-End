@@ -14,12 +14,12 @@ function Navbar() {
 
     return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
         <div className="container-fluid">
           <img className='navbar-brand p-0' src={alucarLogo} alt="AluCar Logo" style={{ height: '80px' }}/>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <div className='d-flex flex-grow-1 justify-content-center' id='menuLinks'>
-              <ul className="w-50 navbar-nav d-flex justify-content-around">
+            <div className='d-flex flex-grow-1 justify-content-around' id='menuLinks'>
+              <ul className="w-100 navbar-nav d-flex justify-content-around text-nowrap">
                 <li className="nav-item">
                   <a className="nav-link" href="#encontre-seu-carro" id='link'>Encontre seu carro</a>
                 </li>

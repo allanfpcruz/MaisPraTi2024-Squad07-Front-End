@@ -1,21 +1,22 @@
-  body {
+  #involucrum {
     font-family: var(--primary-font-family);
     background-color: #f8f8f8;
     color: var(--secondary-color);
+    height: 26rem;
   }
 
 
   .how-it-works {
     text-align: center;
-    padding: 40px 20px;
+    padding: 1.3rem 0.6rem;
   }
 
   .how-it-works h1 {
-    margin-top: 70px;
+    margin-top: 2.3rem;
     font-family: var(--primary-font-family);
     font-size: 2rem;
     font-weight: 650;
-    margin-bottom: 10px;
+    margin-bottom: 0.33rem;
     text-transform: uppercase;
 
   }
@@ -23,27 +24,27 @@
   .how-it-works .subtitle {
     font-size: 1.2rem;
     color: #555;
-    margin-bottom: 40px;
+    margin-bottom: 1.3rem;
     letter-spacing: 0.5px;
   }
 
   .steps {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 1rem;
     flex-wrap: wrap;
   }
 
   .step {
-    max-width: 300px;
+    max-width: 10rem;
     text-align: center;
   }
 
   .icon-wrapper {
-    width: 100px;
+    width: 3.3rem;
     /* Certifique-se de que o tamanho combina com o círculo */
-    height: 100px;
-    margin: 0 auto 20px;
+    height: 3.3rem;
+    margin: 0 auto 0.7rem;
     display: flex;
     /* Ativa flexbox */
     justify-content: center;
@@ -56,8 +57,8 @@
 
   .icon-wrapper .circle {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 3.3rem;
+    height: 3.3rem;
     border-radius: 50%;
     border: 2px dashed var(--secondary-color);
     animation: rotate 20s linear infinite;
@@ -76,9 +77,9 @@
   }
 
   .icon-wrapper img {
-    width: 89px;
+    width: 3rem;
     /* Ajuste as dimensões conforme necessário */
-    height: 89px;
+    height: 3rem;
     border-radius: 50%;
     /* Faz com que a imagem fique circular */
     object-fit: cover;
@@ -94,7 +95,7 @@
   .step h2 {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 0.33rem;
   }
 
   .step p {

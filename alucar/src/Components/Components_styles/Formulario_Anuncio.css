@@ -1,18 +1,10 @@
-* {
-  border: none;
-  outline: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .form-container {
   padding: .6rem 1.2rem;
   max-width: 60%;
 }
 
 .form-container h3 {
-  font-size: .5rem;
+  font-size: var(--font-size-ultra-small);
 }
 
 .form-container form {

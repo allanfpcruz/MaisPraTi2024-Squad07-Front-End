@@ -14,9 +14,9 @@ function Sidebar() {
       <div className="sidebar">
         <div className="user-container">
           <p>São Paulo - SP</p>
-          <img src="user_image.jpg" alt="imagem do usuário" />
+          <img src="./src/assets/1h.png" alt="imagem do usuário" />
           <h3>{loggedUser.name}</h3>
-          <p className='since'><LuCalendarCheck /><span>Membro desde 2016</span></p>
+          <p className='since'><LuCalendarCheck /><span>Membro desde 2024</span></p>
         </div>
         <div className="like-container">
           <div className="liked">

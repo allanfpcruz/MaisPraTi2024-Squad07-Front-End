@@ -1,6 +1,12 @@
-#link {
-  font-size: 1em;
+a#link.nav-link {
+  font-size: 0.7rem;
+  color: black;
   font-family: var(--primary-font-family);
+}
+
+.nav-item{
+  height: 1rem;
+  width: 5rem;
 }
 
 #btn1, #btn2 {
@@ -10,8 +16,13 @@
   padding: 10px 20px;
 }
 
+#btnLinks{
+  border: none!important;
+}
+
 #btn1 {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color)!important;
+  color: white!important;
   border: none;
 }
 
@@ -33,24 +44,29 @@
   background-color: rgb(33, 32, 30, 0.8);
 }
 
+.text-nowrap{
+  white-space: nowrap!important;
+}
+
 @media (max-width: 991px) {
   #navbar-nav {
       flex-direction: column;
-      justify-content: center !important; 
+      justify-content: space-evenly !important; 
   }
 
   #menuLinks {
       display: flex;
-      justify-content: center !important;
+      flex-flow: row;
+      justify-content: space-evenly !important;
   }
 
   #menuLinks ul {
       display: flex;
-      align-items: center !important;
+      align-items: space-evenly !important;
   }
 
   #btnLinks {
     display: flex;
-    justify-content: center !important;
+    justify-content: space-evenly !important;
   }
 }
