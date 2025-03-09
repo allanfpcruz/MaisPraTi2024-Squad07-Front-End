@@ -1,7 +1,10 @@
+import { useEffect } from 'react'
 import './Components_styles/CarCard_Editing.css'
 
-const CarCard_Editing = (props) => {
-	const formData = props.formData
+const CarCard_Editing = ({ formData }) => {
+	useEffect(() => {
+		console.log(formData)
+	}, [])
 	return (
 		<div className="car-card">
 			<div className="image-gallery">
@@ -34,30 +37,30 @@ const CarCard_Editing = (props) => {
 			</div>
 
 			<div className="car-info">
-				<h3>{formData.nome}</h3>
+				<h3>{formData.title}</h3>
 				<div className="car-details">
 					<span>
 						<img src="./cambio.svg" alt="câmbio" className="icon" />
-						{formData.cambio}
+						{formData.transmission}
 					</span>
 					<span>
 						<img src="./km.svg" alt="km" className="icon" />
-						{formData.quilometragem} Km
+						{formData.mileage} Km
 					</span>
 					<span>
 						<img src="./gasolina.svg" alt="combustível" className="icon" />
-						{formData.combustivel}
+						{formData.main_fuel}
 					</span>
 				</div>
 			</div>
 
 			<div className="pricing">
 				<p>Por Dia</p>
-				<h2>R$ {formData.valor}</h2>
+				<h2>R$ {formData.daily_rent_value}</h2>
 			</div>
 			<div className="location">
 				<img src="./location_on.svg" alt="location" className="icon" />
-				{formData.local}
+				{formData.location}
 			</div>
 
 			<button className="rent-button">

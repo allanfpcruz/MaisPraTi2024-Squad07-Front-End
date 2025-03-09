@@ -16,7 +16,8 @@ import { userContext } from '../Context/userContext';
 function Logged_Navbar() {
   const [isDropdownUserOpen, setIsDropdownUserOpen] = useState(false);
 	const [isDropdownNotifOpen, setIsDropdownNotifOpen] = useState(false);
-  const { setLoggedUser } = useContext(userContext)
+  const { loggedUser, setLoggedUser } = useContext(userContext)
+  const typeOfLoggedUser = loggedUser.type
 
 	const toggleDropdown = () => {
 		setIsDropdownUserOpen(!isDropdownUserOpen);

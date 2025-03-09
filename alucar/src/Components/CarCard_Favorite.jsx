@@ -16,7 +16,7 @@ export class CarCard_Favorite extends Component {
 						<img src="./user.png" alt="user" className="user-icon" />
 					</div>
 					<div className="info-content">
-						<h3>{formData.nome}</h3>
+						<h3>{/*formData.nome*/}</h3>
 						<hr />
 
 						<div className="car-items">
@@ -26,15 +26,15 @@ export class CarCard_Favorite extends Component {
 									alt="speedometer"
 									className="car-icon"
 								/>
-								<p>{formData.cambio}</p>
+								<p>{/*formData.cambio*/}</p>
 							</div>
 							<div className="car-item">
 								<img src="./km.svg" alt="gas station" className="car-icon" />
-								<p>{formData.quilometragem}</p>
+								<p>{/*formData.quilometragem*/}</p>
 							</div>
 							<div className="car-item">
 								<img src="./gasolina.svg" alt="engine" className="car-icon" />
-								<p>{formData.combustivel}</p>
+								<p>{/*formData.combustivel*/}</p>
 							</div>
 						</div>
 					</div>
@@ -46,7 +46,7 @@ export class CarCard_Favorite extends Component {
 								alt="location on"
 								className="search-icon"
 							/>
-							{formData.local}
+							{/*formData.local*/}
 						</button>
 						<button className="button-action">
 							<img

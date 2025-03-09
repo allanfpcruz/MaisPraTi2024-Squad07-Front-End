@@ -1,11 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import './Components_styles/CarCard.css'
+import { useEffect } from 'react'
+import useCars from '../Hooks/UseCars'
 
-const CarCard = () => {
+const CarCard = (infos) => {
+	const data = infos.data
 	const navigate = useNavigate()
-	const goTo = (path) => {
-		navigate(`/${path}`)
-	}
+	const { deleteAds } = useCars()
+
 	return (
 		<div className="car-card">
 			<div className="image-gallery">
@@ -38,26 +40,26 @@ const CarCard = () => {
 			</div>
 
 			<div className="car-info">
-				<h3>Fiat Pulse 2024</h3>
+				<h3>{data.title}</h3>
 				<div className="car-details">
 					<span>
 						<img src="./cambio.svg" alt="câmbio" className="icon" />
-						Manual
+						{data.transmission}
 					</span>
 					<span>
 						<img src="./km.svg" alt="km" className="icon" />
-						135.921 km
+						{data.mileage} km
 					</span>
 					<span>
 						<img src="./gasolina.svg" alt="combustível" className="icon" />
-						Gasolina/Etanol
+						{data.main_fuel}/{data.secundary_fuel}
 					</span>
 				</div>
 			</div>
 
 			<div className="pricing">
 				<p>Por Dia</p>
-				<h2>R$ 180,00</h2>
+				<h2>R$ {data.daily_rent_value},00</h2>
 			</div>
 
 			<div className="documents">
@@ -81,16 +83,16 @@ const CarCard = () => {
 
 			<div className="location">
 				<img src="./location_on.svg" alt="location" className="icon" />
-				Vila Nova Conceição - São Paulo
+				{data.location}
 			</div>
 
 			<div className="action-buttons">
-				<button className="edit-button" onClick={() => goTo('editar-anuncio')}>
+				<button className="edit-button" onClick={() => navigate('/editar-anuncio', { state: data })}>
 					<img src="./edit.svg" alt="edit" className="icon" />
 					Editar anúncio
 				</button>
-				<button className="orders-button">Ver pedidos</button>
-				<button className="delete-button">Excluir anúncio</button>
+				<button className="orders-button" onClick={() => navigate('/pedidos-anuncio')}>Ver pedidos</button>
+				<button className="delete-button" onClick={(() => deleteAds(data.id))}>Excluir anúncio</button>
 			</div>
 		</div>
 	)

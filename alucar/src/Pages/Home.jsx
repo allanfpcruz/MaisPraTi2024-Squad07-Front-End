@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react"
 import Logged_Navbar from "../Components/Logged_Navbar"
 import Sidebar from "../Components/Sidebar"
 import { userContext } from "../Context/userContext"
+import Adversiments from "../Components/Adversiments"
 
 function Home() {
   const { loggedUser } = useContext(userContext)
@@ -15,7 +16,7 @@ function Home() {
       <Logged_Navbar />
       <Sidebar />
       <main>
-        
+        <Adversiments />
       </main>
     </>
   )
