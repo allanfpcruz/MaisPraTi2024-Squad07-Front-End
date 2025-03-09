@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="/Project_Files/CSS/reset.css">
     <link rel="stylesheet" href="/Project_Files/CSS/patterns.css">
     <link rel="stylesheet" href="/Components/Login_Screen/component.css">
-    <link rel="stylesheet" href="/Components/Login_Screen/component.css">
     <!-- Ícone.io -->
     <link rel="shortcut icon" href="/Project_Files/CSS/favicon.svg" type="image/x-icon">
     <link rel="icon" type="image/svg" sizes="32x32" href="/Project_Files/CSS/favicon.svg">
 </head>
 
 <body>
+    
+<section id="involucrum">
     <section id="left-login-container">
         <div id="login-car-image-container">
             <img id="login-car-image" src="/Components/Login_Screen/assets/carro 2.svg"
@@ -33,7 +34,7 @@
             <div id="alucar-logo-img">
                 <img src="/Components/Login_Screen/assets/Group 41.svg" alt="ALUCAR Logo">
             </div>
-            <form action="/login" method="post">
+            <form id="form-login" action="/login" method="post">
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required><br>
 
@@ -42,25 +43,30 @@
                     <input type="password" id="password" name="password" required>
                     <button id="toggleButton" class="togglePasswordButton-view" type="button" onclick="togglePasswordVisibility()"></button><br>
                 </div>
-                <div>
-                    <span>Ou entre com</span><hr><hr>
-                    <button type="button" class="google-login" onclick="loginWithGoogle()">
-                        <img src="./assets/google-logo.svg" alt="Google Logo"> Google 
-                    </button>
-                </div>
-                <div class="register-link">
-                    <span>Não possui uma conta? <a href="/register">Registre-se agora!</a></span>
-                </div>
                 <div id="remember-me-label">
                     <input type="checkbox" id="remember-me" name="remember-me">
                     <label for="remember-me">Lembrar-me</label>
-                    <a id="forgot-password" href="/forgot-password">Esqueci minha senha</a><br>
-                </div>                    
+                    <a id="forgot-password" href="#">Esqueci minha senha</a><br>
+                </div>                 
                 <button type="submit">Cadastrar</button>
-            </form>
+            </form>  
+            <div id="google-login-div">
+                <div id="google-login-text">
+                    <span>Ou entre com</span>
+                </div>
+                <span id="google-login-line"><hr></span>
+                <button type="button" id="google-login-button" onclick="loginWithGoogle()">
+                    <img src="./assets/google-logo.svg" alt="Google Logo">
+                    <p>Google</p> 
+                </button>
+            </div>
+            <div id="register-link">
+                <span>Não possui uma conta? <a href="/register">Registre-se agora!</a></span>
+            </div> 
         </div>
     </section>
     <script src="/Components/Login_Screen/script.js"></script>
-</body>
+</section>
 
+</body>
 </html>

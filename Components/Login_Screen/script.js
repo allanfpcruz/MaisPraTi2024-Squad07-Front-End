@@ -13,3 +13,7 @@ function togglePasswordVisibility() {
         toggleButton.classList.add('togglePasswordButton-view');
     }
 }
+
+function loginWithGoogle(){
+    console.log("Implementação futura...")
+}
