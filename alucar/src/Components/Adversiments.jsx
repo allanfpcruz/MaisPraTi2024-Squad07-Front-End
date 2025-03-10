@@ -1,23 +1,19 @@
-import { useState } from "react"
+import { useContext } from "react"
+import { userContext } from "../Context/userContext"
 import MyAds from "./MyAds"
 import Favortie_Ads from "./Favorite_Ads"
 
 function Adversiments() {
-  const [showFavorites, setShowFavorites] = useState(false)
-
-  const toggleShow = () => {
-    setShowFavorites(showFavorites ? false : true)
-  }
+  const { loggedUser } = useContext(userContext)
+  const typeUser = loggedUser.perfil
 
   return(
     <>
-      <h2>Anúncios</h2>
-      <button onClick={toggleShow}>Meus Anúncios</button>
-      <button onClick={toggleShow}>Favoritos</button>
-      {showFavorites ?
-        <Favortie_Ads />
-      :
+      <h2>{typeUser === 'locador' ? 'Meus Anúncios' : 'Anúncios para Você'}</h2>
+      {typeUser === 'locador' ?
         <MyAds />
+      :
+        <Favortie_Ads />
       }
     </>
   )

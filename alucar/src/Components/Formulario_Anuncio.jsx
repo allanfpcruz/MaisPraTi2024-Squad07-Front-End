@@ -5,10 +5,12 @@ import { useEffect, useState } from 'react'
 import { TbFolderPlus, TbHandFinger } from "react-icons/tb";
 import { LuDownload } from "react-icons/lu";
 import { IoIosArrowDown } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 
 function Formulario_Anuncio({ formData, setFormData, type }) {
   const [fileList, setFileList] = useState([])
   const { createAds, updateAds } = useCars()
+  const navigate = useNavigate()
 
   useEffect(() => {
     formData.documentos = fileList
@@ -62,9 +64,11 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
 
   //envia o formulario
   const sendForm = () => {
-    type == 'Criar' ? 
-      createAds(formData)
-    : updateAds(formData, formData.id)
+    // type == 'Criar' ? 
+    //   createAds(formData)
+    // : updateAds(formData, formData.id)
+
+    navigate('/home')
   }
 
   return(
@@ -76,8 +80,8 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <label htmlFor="name">Nome do Anúncio*</label>
               <input 
                 type="text" 
-                id="name"
-                name='nome'
+                id="title"
+                name='title'
                 value={formData.title}
                 onChange={handleChange}
                 required />
@@ -86,8 +90,8 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <label htmlFor="local">Localização do Veículo*</label>
               <input 
                 type="text"  
-                id="local"
-                name='local' 
+                id="location"
+                name='location' 
                 placeholder='Bairro - Cidade'
                 value={formData.location}
                 onChange={handleChange}
@@ -97,7 +101,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <label htmlFor="cambio">Câmbio*</label>
               <select 
                 id="cambio"
-                name='cambio'
+                name='transmission'
                 value={formData.transmission}
                 onChange={handleChange}>
                 <option value="Manual" selected>Manual</option>
@@ -112,7 +116,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <input 
                 type="text" 
                 id="km"
-                name='quilometragem' 
+                name='mileage' 
                 placeholder='Número aproximado'
                 value={formData.mileage}
                 onChange={handleChange}
@@ -122,7 +126,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <label htmlFor="combustivel">Combustível*</label>
               <select 
                 id="combustivel"
-                name='combustivel'
+                name='main_fuel'
                 value={formData.main_fuel}
                 onChange={handleChange}>
                 <option value="Álcool" selected>Álcool</option>
@@ -136,7 +140,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <label htmlFor="alt-combustivel">Combustível Alternativo*</label>
               <select 
                 id="alt-combustivel"
-                name='altcombustivel'
+                name='secondary_fuel'
                 value={formData.secundary_fuel}
                 onChange={handleChange}>
                 <option value="Álcool" selected>Álcool</option>
@@ -151,7 +155,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <input 
                 type="text" 
                 id="pot"
-                name='potencia'
+                name='engine_power'
                 value={formData.engine_power}
                 onChange={handleChange}
                 required />
@@ -160,7 +164,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <label htmlFor="sist">Sistema de Direção*</label>
               <select 
                 id="sist"
-                name='sistemadirecao'
+                name='steering_system'
                 value={formData.steering_system}
                 onChange={handleChange}>
                 <option value="Hidráulico" selected>Hidráulico</option>
@@ -176,7 +180,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
                 id="num" 
                 min={1} 
                 max={8}
-                name='numpassageiros'
+                name='number_of_seats'
                 value={formData.number_of_seats}
                 onChange={handleChange}
                 required/>
@@ -186,7 +190,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <input 
                 type="text" 
                 id="plate"
-                name='placa'
+                name='plate'
                 value={formData.plate}
                 onChange={handleChange}
                 required />
@@ -196,7 +200,7 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <input 
                 type="text" 
                 id="price"
-                name='valor'
+                name='daily_rent_value'
                 value={formData.daily_rent_value}
                 onChange={handleChange}
                 required />
@@ -250,8 +254,8 @@ function Formulario_Anuncio({ formData, setFormData, type }) {
               <label htmlFor="desc">Descrição*</label>
               <textarea 
                 id="desc"
-                name='descricao'
-                value={formData.descricao}
+                name='description'
+                value={formData.description}
                 onChange={handleChange}>
               </textarea>
             </div>

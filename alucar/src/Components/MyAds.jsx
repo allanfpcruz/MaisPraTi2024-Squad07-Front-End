@@ -7,9 +7,10 @@ function MyAds() {
   //pega todos os anuncios atribuidos ao usuario logado
   // const { getAllMyAdds } = useCars()
   // const { loggedUser } = useContext(userContext)
-  //recarrega os anuncios sempre que o componente e renderizado
+  //recarrega os anuncios sempre que anuncios e alterado
+  //
   // useEffect(() => {  
-  //   // const anuncios = getAllMyAdds(loggedUser.id)
+  //   const anuncios = getAllMyAdds(loggedUser.id)
   // }, [])
 
   //teste de retorno de anuncios

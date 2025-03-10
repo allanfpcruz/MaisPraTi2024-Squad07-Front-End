@@ -17,7 +17,7 @@ function Logged_Navbar() {
   const [isDropdownUserOpen, setIsDropdownUserOpen] = useState(false);
 	const [isDropdownNotifOpen, setIsDropdownNotifOpen] = useState(false);
   const { loggedUser, removeLoggedUser } = useContext(userContext)
-  const typeOfLoggedUser = loggedUser.type
+  const typeOfLoggedUser = loggedUser.perfil
   const navigate = useNavigate()
 
 	const toggleDropdown = () => {
@@ -29,8 +29,8 @@ function Logged_Navbar() {
 	}
 
   const logout = () => {
-    removeLoggedUser()
     navigate('/')
+    removeLoggedUser()
   }
 
   return(
@@ -44,7 +44,7 @@ function Logged_Navbar() {
                   <div className='d-flex flex-grow-1 justify-content-center' id='menuLinks'>
                     <ul className="w-50 navbar-nav d-flex justify-content-around">
                               <li className="nav-item">
-                                  <a className="nav-link" href="#Meus-anuncios" id='link'><img className='me-2 mb-1' src={gridIcon} style={{ height: '18px' }}/>Meus Anúncios</a>
+                                  <a className="nav-link" href="#Meus-anuncios" id='link'><img className='me-2 mb-1' src={gridIcon} style={{ height: '18px' }}/>Meus {typeOfLoggedUser === 'locador' ? 'Anúncios' : 'Pedidos'}</a>
                       </li>
                       <li className='nav-item'>
                         <a className="nav-link" href="#chat" id='link'><img className='me-2 mb-1' src={messageIcon} style={{ height: '18px' }}/>Chat</a>
@@ -70,13 +70,23 @@ function Logged_Navbar() {
                                   
                         <div className="d-flex ms-auto" id='btnLinks'>
                             <button className="btn btn-light border border-secondary me-2 rounded-1 d-flex align-items-center justify-content-center" onClick={toggleDropdown} id='btn1'><img src=""/>{loggedUser.name}<img className='ms-2' src={CaretDown} style={{ height: '23px' }}/></button>
-                            <button className="btn rounded-1 d-flex align-items-center justify-content-center" id='btn2' onClick={() => goTo('criar-anuncio')}><img className='me-2' src={addIcon} style={{ height: '12px' }}/>Criar Anúncio</button>
+                            {typeOfLoggedUser === 'locador' ?
+                              <button 
+                              className="btn rounded-1 d-flex align-items-center justify-content-center" 
+                              id='btn2' 
+                              onClick={() => navigate('/criar-anuncio')}>
+                                <img className='me-2' src={addIcon} style={{ height: '12px' }}/>
+                                Criar Anúncio
+                              </button>
+                              :
+                              <></> }
+                            
       
                     {isDropdownUserOpen && (
                       <div className={`bg-white position-absolute mt-5 p-2 bg-light border border-secondary rounded-1`}>
                         <ul className="list-unstyled mb-0">
                             <li className="mb-2">
-                            <a href="#" className="nav-link" id='dropdownUser' onClick={() => goTo('configuration')}><img className='me-1' src={settingsIcon} alt="ícone de configuração" style={{ height: '22px' }} />Configurações</a>
+                            <a href="#" className="nav-link" id='dropdownUser' onClick={() => navigate('/configuration')}><img className='me-1' src={settingsIcon} alt="ícone de configuração" style={{ height: '22px' }} />Configurações</a>
                             </li>
                             <li className="">
                             <a href="#" className="nav-link" id='dropdownUser' onClick={logout}><img className='me-1' src={logoutIcon} alt="ícone de sair" style={{ height: '22px' }} />Sair</a>
