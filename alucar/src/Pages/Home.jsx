@@ -6,10 +6,11 @@ import Adversiments from "../Components/Adversiments"
 
 function Home() {
   const { loggedUser } = useContext(userContext)
+  const typeUser = loggedUser.perfil
 
-  useEffect(() => {
-    console.log('Usuário logado: ', loggedUser)
-  }, [])
+  // useEffect(() => {
+  //   console.log('Usuário logado: ', loggedUser)
+  // }, [])
 
   return(
     <>

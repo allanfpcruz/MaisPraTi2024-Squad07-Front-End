@@ -5,5 +5,12 @@
     "password": "$2b$10$l.6iaeZAW0BDC.yKzyMsUenAL.8n5KRLjx2ixS0nqcmXwUcmXXtBe",
     "perfil": "locador",
     "id": "afa4aa58-b4b8-4b26-b58d-02d7d9ef5b9e"
+  },
+  {
+    "name": "Allan",
+    "email": "allan@email",
+    "password": "$2b$10$LJtG9cihPscw8OMRiV8XveWF2jBL1yaVYn25i.eHZT7rj4krsXhAm",
+    "perfil": "locatário",
+    "id": "f52519d8-e0e8-4a0f-88af-3bd63274e026"
   }
 ]

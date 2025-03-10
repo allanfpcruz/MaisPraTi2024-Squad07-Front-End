@@ -8,6 +8,7 @@ import '../Components/Components_styles/LastCars.css';
 //import local from "../../assets/local.png"
 //import calendario from "../../assets/calendario.png"
 import maior from "../assets/maior.svg"
+import Favortie_Ads from './Favorite_Ads';
 
 
 const LastCars = () => {
@@ -19,6 +20,8 @@ const LastCars = () => {
                 <p className='cars-p'>Descubra os carros mais recentes disponíveis para aluguel na sua região</p>
                 </div>
                 <div className='cars-cards'>
+                    {/* componente que contem os cards */}
+                    <Favortie_Ads />
                     {/*
                     <div className='card'>
                         <img src={tracker} alt="Tracker" />

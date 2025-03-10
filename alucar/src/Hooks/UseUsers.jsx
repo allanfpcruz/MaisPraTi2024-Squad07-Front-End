@@ -5,6 +5,7 @@ import { userContext } from '../Context/userContext';
 
 function useUsers () {
   const { setLoggedUser } = useContext(userContext)
+  const navigate = useNavigate()
 
   //cria um usuario base
   const createUser = async (formData) => {
@@ -20,8 +21,10 @@ function useUsers () {
       if (!response.ok) throw new Error(json.error || 'Erro ao criar usuário')
       //imprime a resposta da requisicao
       console.log(json);
+      //define um usuario logado para que possa acessar '/locador-locatario'(rota protegida)
+      setLoggedUser(formData)
       //leva a pagina para escolher tipo de perfil
-      goTo('locador-locatario')
+      navigate('/locador-locatario', { state: formData })
     } catch (error) {
       console.error("Erro ao enviar:", error.message);
     }
@@ -40,7 +43,7 @@ function useUsers () {
       const json = await response.json();
       if (!response.ok) throw new Error(json.error || 'Erro ao criar usuário')
       //imprime a resposta da requisicao
-      console.log(json)
+      console.log(json, formData)
       loginUser(formData)
     }
     catch(error) {
@@ -61,7 +64,7 @@ function useUsers () {
       const json = await response.json();
       if (!response.ok) throw new Error(json.error || 'Erro ao criar usuário')
       //imprime a resposta da requisicao
-      console.log(json);
+      console.log(json, formData);
       loginUser(formData)
     }
     catch(error) {
@@ -85,22 +88,16 @@ function useUsers () {
   
       if(!(bcrypt.compareSync(formData.password, user.password))) throw new Error('Senha incorreta')
   
-      goTo('home')
-
       setLoggedUser(user)
-  
-      return user
+
+      //caso o usuario tenha perfil definido, vai para home, se nao, vai para locador-locatario
+      user.perfil ? navigate('/home') : navigate('/locador-locatario')
     } catch (error) {
       console.error("Erro ao buscar usuários:", error.message);
       return false
     }
   };
   
-  const navigate = useNavigate()
-  const goTo = (path) => {
-    navigate(`/${path}`)
-  }
-
   return { createUser, createDriverUser, createRenterUser, loginUser }
 }
 

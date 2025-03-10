@@ -3,12 +3,11 @@ import "./Components_styles/RoleCard.css";
 import useUsers from "../Hooks/UseUsers";
 
 const RoleCard = ({ title, descriptionList, buttonText, image, isDark, userData }) => {
-  const { createUser } = useUsers()
+  const { createDriverUser, createRenterUser } = useUsers()
 
   const attUser = () => {
     userData.perfil = title.toLowerCase()
-    createUser(userData)
-    console.log(userData)
+    userData.perfil === 'locador' ? createRenterUser(userData) : createDriverUser(userData)
   }
 
 

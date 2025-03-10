@@ -25,6 +25,22 @@ function useCars() {
     }
   }
 
+  const getAllAds = async () => {
+    try{
+      const response = await fetch("/*link da requisição*/", {
+        method: "GET"
+      })
+      const myAds = await response.json();
+      if (!response.ok) throw new Error(json.error || 'Erro ao requisitar anúncios')
+      //imprime a resposta da requisicao
+      console.log(myAds)
+      return myAds
+    }
+    catch(error) {
+      console.error(error)
+    }
+  }
+
   const getAllMyAds = async (renterId) => {
     try{
       const response = await fetch("/*link da requisição*/{renterId}", {
@@ -84,7 +100,7 @@ function useCars() {
     navigate(`/${path}`)
   }
 
-  return { createAds, getAllMyAds, updateAds, deleteAds }
+  return { createAds, getAllAds, getAllMyAds, updateAds, deleteAds }
 }
 
 export default useCars
