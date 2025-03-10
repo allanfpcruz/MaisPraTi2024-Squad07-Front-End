@@ -10,6 +10,8 @@ import Locador_Locatario from "./Pages/Locador_Locatario"
 import CriarAnuncio from "./Pages/CriarAnuncio"
 import EditarAnuncio from "./Pages/EditarAnuncio"
 import Configuration from "./Pages/Configuration"
+import ProtectedRoute from "./Routes/ProtectedRoute"
+import AuthProtectedRoute from "./Routes/AuthProtectedRoute"
 
 function App() {
   return (
@@ -19,11 +21,15 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/criar-anuncio" element={<CriarAnuncio />} />
-          <Route path="/editar-anuncio" element={<EditarAnuncio />} />
-          <Route path="/locador-locatario" element={<Locador_Locatario />} />
-          <Route path="/configuration" element={<Configuration />} />
+          <Route element={<ProtectedRoute />} >
+            <Route path="/locador-locatario" element={<Locador_Locatario />} />
+          </Route>
+          <Route element={<AuthProtectedRoute />} >
+            <Route path="/home" element={<Home />} />
+            <Route path="/criar-anuncio" element={<CriarAnuncio />} />
+            <Route path="/editar-anuncio" element={<EditarAnuncio />} />
+            <Route path="/configuration" element={<Configuration />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

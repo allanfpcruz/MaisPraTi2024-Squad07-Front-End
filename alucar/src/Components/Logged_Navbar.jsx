@@ -16,8 +16,9 @@ import { userContext } from '../Context/userContext';
 function Logged_Navbar() {
   const [isDropdownUserOpen, setIsDropdownUserOpen] = useState(false);
 	const [isDropdownNotifOpen, setIsDropdownNotifOpen] = useState(false);
-  const { loggedUser, setLoggedUser } = useContext(userContext)
+  const { loggedUser, removeLoggedUser } = useContext(userContext)
   const typeOfLoggedUser = loggedUser.type
+  const navigate = useNavigate()
 
 	const toggleDropdown = () => {
 		setIsDropdownUserOpen(!isDropdownUserOpen);
@@ -28,13 +29,8 @@ function Logged_Navbar() {
 	}
 
   const logout = () => {
-    setLoggedUser({})
-    goTo('')
-  }
-
-  const navigate = useNavigate()
-  const goTo = (path) => {
-    navigate(`/${path}`)
+    removeLoggedUser()
+    navigate('/')
   }
 
   return(
@@ -73,7 +69,7 @@ function Logged_Navbar() {
                   </div>
                                   
                         <div className="d-flex ms-auto" id='btnLinks'>
-                            <button className="btn btn-light border border-secondary me-2 rounded-1 d-flex align-items-center justify-content-center" onClick={toggleDropdown} id='btn1'><img src=""/>Renan P.<img className='ms-2' src={CaretDown} style={{ height: '23px' }}/></button>
+                            <button className="btn btn-light border border-secondary me-2 rounded-1 d-flex align-items-center justify-content-center" onClick={toggleDropdown} id='btn1'><img src=""/>{loggedUser.name}<img className='ms-2' src={CaretDown} style={{ height: '23px' }}/></button>
                             <button className="btn rounded-1 d-flex align-items-center justify-content-center" id='btn2' onClick={() => goTo('criar-anuncio')}><img className='me-2' src={addIcon} style={{ height: '12px' }}/>Criar Anúncio</button>
       
                     {isDropdownUserOpen && (
