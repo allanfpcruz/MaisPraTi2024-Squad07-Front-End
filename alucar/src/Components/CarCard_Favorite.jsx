@@ -4,14 +4,21 @@ import { userContext } from '../Context/userContext';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 function CarCard_Favorite(props) {
-	const formData = props.data
+	const anuncio = props.data
 	const { loggedUser } = useContext(userContext)
 	const navigate = useNavigate()
 	const location = useLocation()
 
+	//caso não esteja logado ou esteja logado como locador, vai para login
+	//caso seja locatario, se estiver na landing-page, vai para home, caso ja esteja na home, vai para pagina de pedido
 	const tryRent = () => {
-		!loggedUser || loggedUser.perfil === 'locador' ? navigate('/login') : location.pathname === '/' ? navigate('home') : rentCar()
+		!loggedUser || loggedUser.perfil === 'locador' ? navigate('/login') : location.pathname === '/' ? navigate('/home') : navigate('/alugar-carro', { state: anuncio })
 	}
+
+	const rentCar = () => {
+		alert('ok')
+	}
+
 	return (
 		<section className="card-container">
 			<div className="content">
@@ -24,7 +31,7 @@ function CarCard_Favorite(props) {
 					<img src="./user.png" alt="user" className="user-icon" />
 				</div>
 				<div className="info-content">
-					<h3>{formData.name}</h3>
+					<h3>{anuncio.name}</h3>
 					<hr />
 
 					<div className="car-items">
@@ -34,15 +41,15 @@ function CarCard_Favorite(props) {
 								alt="speedometer"
 								className="car-icon"
 							/>
-							<p>{formData.transmission}</p>
+							<p>{anuncio.transmission}</p>
 						</div>
 						<div className="car-item">
 							<img src="./km.svg" alt="gas station" className="car-icon" />
-							<p>{formData.mileage}</p>
+							<p>{anuncio.mileage}</p>
 						</div>
 						<div className="car-item">
 							<img src="./gasolina.svg" alt="engine" className="car-icon" />
-							<p>{formData.main_fuel}</p>
+							<p>{anuncio.main_fuel}</p>
 						</div>
 					</div>
 				</div>
@@ -54,7 +61,7 @@ function CarCard_Favorite(props) {
 							alt="location on"
 							className="search-icon"
 						/>
-						{formData.location}
+						{anuncio.location}
 					</button>
 					<button className="button-action" onClick={tryRent}>
 						<img

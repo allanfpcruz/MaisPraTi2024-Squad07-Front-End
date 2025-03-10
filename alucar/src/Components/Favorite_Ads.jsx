@@ -13,18 +13,18 @@ function Favortie_Ads() {
     {
       id: 1,
       title: 'Carro 0km',
-      location: '',
-      transmission: 'Automático',
+      location: 'São Bernardo, SP',
+      transmission: 'Manual',
       mileage: '16800km',
       main_fuel: 'Álcool',
       secundary_fuel: 'Gasolina',
-      engine_power: '',
+      engine_power: '660Cv',
       steering_system: 'Hidráulico',
-      number_of_seats: 0,
-      plate: '',
-      daily_rent_value: '',
+      number_of_seats: 5,
+      plate: 'FGQ1086',
+      daily_rent_value: '200',
       photos: [],
-      desciption: ''
+      description: 'Carro manual em ótimo estado'
     }, {
       id: 2,
       title: 'Seminovo',

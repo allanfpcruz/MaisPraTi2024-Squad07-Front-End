@@ -12,6 +12,7 @@ import EditarAnuncio from "./Pages/EditarAnuncio"
 import Configuration from "./Pages/Configuration"
 import ProtectedRoute from "./Routes/ProtectedRoute"
 import AuthProtectedRoute from "./Routes/AuthProtectedRoute"
+import AlugarCarro from "./Pages/AlugarCarro"
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/criar-anuncio" element={<CriarAnuncio />} />
             <Route path="/editar-anuncio" element={<EditarAnuncio />} />
+            <Route path="/alugar-carro" element={<AlugarCarro />} />
             <Route path="/configuration" element={<Configuration />} />
           </Route>
         </Routes>
