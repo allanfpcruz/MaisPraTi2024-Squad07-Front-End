@@ -15,10 +15,6 @@ function CarCard_Favorite(props) {
 		!loggedUser || loggedUser.perfil === 'locador' ? navigate('/login') : location.pathname === '/' ? navigate('/home') : navigate('/alugar-carro', { state: anuncio })
 	}
 
-	const rentCar = () => {
-		alert('ok')
-	}
-
 	return (
 		<section className="card-container">
 			<div className="content">

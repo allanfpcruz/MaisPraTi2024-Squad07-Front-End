@@ -1,10 +1,13 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Formulario_Anuncio from "../Components/Formulario_Anuncio"
 import CarCard_Editing from "../Components/CarCard_Editing"
 import Logged_Navbar from "../Components/Logged_Navbar"
+import { userContext } from "../Context/userContext"
 
 function CriarAnuncio() {
+  const { loggedUser } = useContext(userContext)
   const [formData, setFormData] = useState({
+    owner_id: loggedUser.id,
     title: '',
     location: '',
     transmission: 'Manual',

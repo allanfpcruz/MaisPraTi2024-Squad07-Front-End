@@ -4,11 +4,17 @@ import { useNavigate } from 'react-router-dom';
 import { userContext } from '../Context/userContext';
 
 function useUsers () {
-  const { setLoggedUser } = useContext(userContext)
+  const { loggedUser, setLoggedUser } = useContext(userContext)
   const navigate = useNavigate()
 
   //cria um usuario base
   const createUser = async (formData) => {
+    //define a data de criacao do usuario
+    const today = new Date()
+    const year = today.getFullYear()
+    const month = String(today.getMonth() + 1).padStart(2, '0')
+    const day = String(today.getDate()).padStart(2, '0')
+    formData.created_at = `${year}-${month}-${day}`
     try {
       const response = await fetch("http://localhost:3333/users", {
         method: "POST",
@@ -24,7 +30,7 @@ function useUsers () {
       //define um usuario logado para que possa acessar '/locador-locatario'(rota protegida)
       setLoggedUser(formData)
       //leva a pagina para escolher tipo de perfil
-      navigate('/locador-locatario', { state: formData })
+      navigate('/locador-locatario', { state: loggedUser })
     } catch (error) {
       console.error("Erro ao enviar:", error.message);
     }

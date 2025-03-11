@@ -3,15 +3,18 @@ import CarCard_Favorite from "./CarCard_Favorite";
 import useCars from "../Hooks/UseCars";
 
 function Favortie_Ads() {
-  //pega todos os anuncios disponiveis
-  // const { getAllAds } = useCars()
-  // const [anuncios, setAnuncios] = useState([])
+  //pega todos os anuncios disponiveis sempre que o componente e renderizado
   // useEffect(() => {
-  //   setAnuncios(getAllAds())
+    // const { getAllAds } = useCars()
+    // const [anuncios, setAnuncios] = useState([])
+    // useEffect(() => {
+    //   setAnuncios(getAllAds())
+    // }, [])
   // }, [])
   let anuncios = [
     {
       id: 1,
+      owner_id: 1,
       title: 'Carro 0km',
       location: 'São Bernardo, SP',
       transmission: 'Manual',

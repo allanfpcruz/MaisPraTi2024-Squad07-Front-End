@@ -8,12 +8,14 @@ const CreateOrder = ({ toggleIsOpen, anuncio }) => {
   const { loggedUser } = useContext(userContext)
   const { createOrder } = useOrder()
   const [formOrder, setFormOrder] = useState({
-    anuncio_id: anuncio.id,
+    advertisement_id: anuncio.id,
     driver_id: loggedUser.id,
+    rent_id: anuncio.owner_id,
     start_data: '',
     end_data: '',
     total_days: 0,
-    total_value: 0
+    total_price: 0,
+    accepted: false
   })
   const today = new Date().toISOString().split("T")[0]
 
@@ -32,7 +34,7 @@ const CreateOrder = ({ toggleIsOpen, anuncio }) => {
     const diffTime = end.getTime() - start.getTime()
     const total_days = diffTime / (1000 * 60 * 60 * 24) + 1
     const total_value = total_days * anuncio.daily_rent_value
-    setFormOrder((prev) =>({ ...prev, total_days, total_value }))
+    setFormOrder((prev) =>({ ...prev, total_days, total_price }))
   }
 
   const handleChange = (e) => {
@@ -67,7 +69,7 @@ const CreateOrder = ({ toggleIsOpen, anuncio }) => {
               </div>
               <div className="div-total">
                 <h4 className="div-total-subtitle">Valor total</h4>
-                <input className="div-total-input" type="text" readOnly placeholder="" value={formOrder.total_value} onChange={handleChange} required/>
+                <input className="div-total-input" type="text" readOnly placeholder="" value={formOrder.total_price} onChange={handleChange} required/>
               </div>
             </div> 
             <div className="btn">

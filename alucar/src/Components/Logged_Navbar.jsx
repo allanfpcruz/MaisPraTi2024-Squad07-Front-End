@@ -36,37 +36,47 @@ function Logged_Navbar() {
   return(
     <>
       <nav className="bg-white navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
-                  <div className="container-fluid">
+        <div className="container-fluid">
+          <img className='navbar-brand p-0' src={alucarLogo} alt="AluCar Logo" style={{ height: '80px' }}/>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <div className='d-flex flex-grow-1 justify-content-center' id='menuLinks'>
+              <ul className="w-50 navbar-nav d-flex justify-content-around">
+                <li className="nav-item">
+                  <a className="nav-link" href="#" id='link' onClick={() => navigate(typeOfLoggedUser === 'locador' ? '/meus-anuncios' : '/meus-pedidos')}>
+                    <img className='me-2 mb-1' src={gridIcon} style={{ height: '18px' }}/>
+                    {typeOfLoggedUser === 'locador' ? 'Ver Pedidos' : 'Meus  Pedidos'}
+                  </a>
+                </li>
+                <li className='nav-item'>
+                  <a className="nav-link" href="#" id='link'>
+                    <img className='me-2 mb-1' src={messageIcon} style={{ height: '18px' }}/>
+                    Chat
+                  </a>
+                </li>
+                <li className='nav-item d-flex flex-column'>
+                  <a className="nav-link" href="#" onClick={toggleDropdownNotif} id='link'>
+                    <img className='me-2 mb-1' src={bellIcon} style={{ height: '18px' }}/>
+                    Notificações
+                  </a>
+                  {isDropdownNotifOpen && (
+                    <div className={`w-25 bg-white position-absolute mt-5 p-2 bg-light border border-secondary rounded-1`} id='responsiveDropdown'>
+                      <ul className="list-unstyled ">
+                        <li className="mb-2">
+                          <a href="#" className="nav-link bg-light p-1 " id='dropdownNotif'>
+                            Prazo de entrega de veículo(Ex de anúncio)
+                            <p className='ps-2 m-0'>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </li>
+              </ul>
+            </div>
             
-                    <img className='navbar-brand p-0' src={alucarLogo} alt="AluCar Logo" style={{ height: '80px' }}/>
       
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                  <div className='d-flex flex-grow-1 justify-content-center' id='menuLinks'>
-                    <ul className="w-50 navbar-nav d-flex justify-content-around">
-                              <li className="nav-item">
-                                  <a className="nav-link" href="#Meus-anuncios" id='link'><img className='me-2 mb-1' src={gridIcon} style={{ height: '18px' }}/>Meus {typeOfLoggedUser === 'locador' ? 'Anúncios' : 'Pedidos'}</a>
-                      </li>
-                      <li className='nav-item'>
-                        <a className="nav-link" href="#chat" id='link'><img className='me-2 mb-1' src={messageIcon} style={{ height: '18px' }}/>Chat</a>
-                      </li>
-                      <li className='nav-item d-flex flex-column'>
-                                <a className="nav-link" href="#notificacoes" onClick={toggleDropdownNotif} id='link'><img className='me-2 mb-1' src={bellIcon} style={{ height: '18px' }}/>Notificação</a>
               
-                        {isDropdownNotifOpen && (
-                          <div className={`w-25 bg-white position-absolute mt-5 p-2 bg-light border border-secondary rounded-1`} id='responsiveDropdown'>
-                            <ul className="list-unstyled ">
-                                <li className="mb-2">
-                                <a href="#" className="nav-link bg-light p-1 " id='dropdownNotif'>Prazo de entrega de veículo(Ex de anúncio)
-                                  <p className='ps-2 m-0'>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
-                                </a>
-                                </li>
-                            </ul>
-                            </div>
-                        )}
-                              </li>
-                          </ul>
                                   
-                  </div>
                                   
                         <div className="d-flex ms-auto" id='btnLinks'>
                             <button className="btn btn-light border border-secondary me-2 rounded-1 d-flex align-items-center justify-content-center" onClick={toggleDropdown} id='btn1'><img src=""/>{loggedUser.name}<img className='ms-2' src={CaretDown} style={{ height: '23px' }}/></button>

@@ -13,6 +13,8 @@ import Configuration from "./Pages/Configuration"
 import ProtectedRoute from "./Routes/ProtectedRoute"
 import AuthProtectedRoute from "./Routes/AuthProtectedRoute"
 import AlugarCarro from "./Pages/AlugarCarro"
+import MeusPedidos from "./Pages/MeusPedidos"
+import MeusAnuncios from "./Pages/MeusAnuncios"
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
             <Route path="/criar-anuncio" element={<CriarAnuncio />} />
             <Route path="/editar-anuncio" element={<EditarAnuncio />} />
             <Route path="/alugar-carro" element={<AlugarCarro />} />
+            <Route path="/meus-pedidos" element={<MeusPedidos />} />
+            <Route path="/meus-anuncios" element={<MeusAnuncios />} />
             <Route path="/configuration" element={<Configuration />} />
           </Route>
         </Routes>

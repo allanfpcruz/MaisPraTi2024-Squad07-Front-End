@@ -15,6 +15,15 @@ function Config() {
   const [isInstaChecked, setInstaChecked] = useState(false)
   const [isWhatsChecked, setWhatsChecked] = useState(false)
   const [isTelChecked, setTelChecked] = useState(false)
+  const [formData, setFormData] = useState({
+    name: loggedUser.name,
+    email: loggedUser.email,
+    cpf: loggedUser.cpf,
+    birthdate: loggedUser.birthdate,
+    phone: loggedUser.phone,
+    created_at: loggedUser.created_at,
+    photo: loggedUser.photo
+  })
 
   //atualiza a lista de arquivos a serem exibidos
   const changeFiles = (input) => {
