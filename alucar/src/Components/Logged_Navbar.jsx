@@ -42,7 +42,7 @@ function Logged_Navbar() {
             <div className='d-flex flex-grow-1 justify-content-center' id='menuLinks'>
               <ul className="w-50 navbar-nav d-flex justify-content-around">
                 <li className="nav-item">
-                  <a className="nav-link" href="#" id='link' onClick={() => navigate(typeOfLoggedUser === 'locador' ? '/meus-anuncios' : '/meus-pedidos')}>
+                  <a className="nav-link" href="#" id='link' onClick={() => navigate(typeOfLoggedUser === 'locador' ? '/ver-pedidos' : '/meus-pedidos')}>
                     <img className='me-2 mb-1' src={gridIcon} style={{ height: '18px' }}/>
                     {typeOfLoggedUser === 'locador' ? 'Ver Pedidos' : 'Meus  Pedidos'}
                   </a>

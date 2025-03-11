@@ -14,7 +14,10 @@ import ProtectedRoute from "./Routes/ProtectedRoute"
 import AuthProtectedRoute from "./Routes/AuthProtectedRoute"
 import AlugarCarro from "./Pages/AlugarCarro"
 import MeusPedidos from "./Pages/MeusPedidos"
-import MeusAnuncios from "./Pages/MeusAnuncios"
+import PedidosAnuncio from "./Pages/PedidosAnuncio"
+import VerPedidos from "./Pages/VerPedidos"
+import RenterProtectedRoute from "./Routes/RenterProtectedRoute"
+import DriverProtectedRoute from "./Routes/DriverProtectedRoute"
 
 function App() {
   return (
@@ -29,12 +32,17 @@ function App() {
           </Route>
           <Route element={<AuthProtectedRoute />} >
             <Route path="/home" element={<Home />} />
-            <Route path="/criar-anuncio" element={<CriarAnuncio />} />
-            <Route path="/editar-anuncio" element={<EditarAnuncio />} />
-            <Route path="/alugar-carro" element={<AlugarCarro />} />
-            <Route path="/meus-pedidos" element={<MeusPedidos />} />
-            <Route path="/meus-anuncios" element={<MeusAnuncios />} />
             <Route path="/configuration" element={<Configuration />} />
+            <Route element={<RenterProtectedRoute />}>
+              <Route path="/criar-anuncio" element={<CriarAnuncio />} />
+              <Route path="/editar-anuncio" element={<EditarAnuncio />} />
+              <Route path="/pedidos-anuncio" element={<PedidosAnuncio />} />
+              <Route path="/ver-pedidos" element={<VerPedidos />} />
+            </Route>
+            <Route element={<DriverProtectedRoute />} >
+              <Route path="/alugar-carro" element={<AlugarCarro />} />
+              <Route path="/meus-pedidos" element={<MeusPedidos />} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>

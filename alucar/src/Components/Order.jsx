@@ -1,6 +1,11 @@
+import { useContext } from "react"
 import useCars from "../Hooks/UseCars"
+import { userContext } from "../Context/userContext"
+import useOrder from "../Hooks/UseOrders"
 
 function Order({ orderData }) {
+  const { loggedUser } = useContext(userContext)
+  const { acceptOrder, rejectOrder } = useOrder()
   //pega o anuncio referente a esse pedido
   // const { getAdsById } = useCars()
   // const anuncio = getAdsById(orderData.anuncio_id)
@@ -23,7 +28,17 @@ function Order({ orderData }) {
   return(
     <>
       <h1>{anuncio.title}</h1>
-      {/* exibir card de pedido com as infos de orderData(pedido) e anuncio(anuncio correspondente ao pedido) */}
+      {loggedUser.perfil === 'locador' ?
+        <div>
+          <div>
+            <button onClick={() => acceptOrder(orderData.id, orderData)}>Aceitar</button>
+            <button onClick={() => rejectOrder(orderData.id)}>Rejeitar</button>
+          </div>
+        </div>
+      : 
+      <></>
+      }
+      {/* exibir card com pedido com as infos de orderData(pedido) e anuncio(anuncio correspondente ao pedido) */}
     </>
   )
 }

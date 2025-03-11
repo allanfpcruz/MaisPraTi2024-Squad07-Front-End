@@ -91,7 +91,7 @@ const CarCard = (infos) => {
 					<img src="./edit.svg" alt="edit" className="icon" />
 					Editar anúncio
 				</button>
-				<button className="orders-button" onClick={() => navigate('/pedidos-anuncio')}>Ver pedidos</button>
+				<button className="orders-button" onClick={() => navigate('/pedidos-anuncio', { state: data.id })}>Ver pedidos</button>
 				<button className="delete-button" onClick={(() => deleteAds(data.id))}>Excluir anúncio</button>
 			</div>
 		</div>
